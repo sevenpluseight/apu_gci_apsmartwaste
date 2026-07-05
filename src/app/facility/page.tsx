@@ -9,9 +9,10 @@ export default function FacilityPage() {
       <div className="ml-4 mt-2 text-white">
         <p>TODO:</p>
         <ul>
-          <li>Home page</li>
-          <li>Report overflowing bin page</li>
-          <li>Eco-Points portal + log activity</li>
+          <li>Overview</li>
+          <li>Campus Map</li>
+          <li>Reports</li>
+          <li>Analytics</li>
         </ul>
       </div>
     </main>
