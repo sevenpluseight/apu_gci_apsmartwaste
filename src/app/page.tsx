@@ -1,6 +1,7 @@
 import LandingNavbar from "@/components/landing/LandingNavBar";
 import HeroSection from "@/components/landing/Hero";
 import RoleSelection from "@/components/landing/RoleSelection";
+import KioskDemo from "@/components/landing/KioskDemo";
 import CampaignOverview from "@/components/landing/CampaignOverview";
 import Footer from "@/components/landing/Footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <LandingNavbar />
         <HeroSection />
         <RoleSelection />
+        <KioskDemo />
         <CampaignOverview />
         <Footer />
       </div>

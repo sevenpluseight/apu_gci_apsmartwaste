@@ -1,0 +1,28 @@
+[
+  {
+    "id": "RPT-1231",
+    "building": "Block B",
+    "floor": "Level 8",
+    "location": "Lift Area",
+    "issue": "Plastic Bin Overflow",
+    "category": "Plastic",
+    "assignedTime": "10:15 AM",
+    "startedTime": "10:25 AM",
+    "elapsed": "20 mins",
+    "bins": 2,
+    "priority": "High"
+  },
+  {
+    "id": "RPT-1232",
+    "building": "Block C",
+    "floor": "Level 6",
+    "location": "Student Lounge",
+    "issue": "Plastic Bin Overflow",
+    "category": "Plastic",
+    "assignedTime": "10:40 AM",
+    "startedTime": "10:45 AM",
+    "elapsed": "5 mins",
+    "bins": 1,
+    "priority": "Medium"
+  }
+]
