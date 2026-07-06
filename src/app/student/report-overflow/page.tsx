@@ -63,7 +63,7 @@ export default function ReportOverflowPage() {
   }
 
   return (
-    <div className="mx-auto max-w-360 px-10 py-10 text-white">
+    <div className="mx-auto max-w-360 px-10 py-3 text-white">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-white">Report Overflowing Bin</h1>
         <p className="mt-1 text-sm text-[#B2B2B2]">

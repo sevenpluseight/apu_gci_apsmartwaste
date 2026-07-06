@@ -8,7 +8,7 @@ export default function StudentPage() {
   const { profile, challenge, didYouKnow } = studentData;
 
   return (
-    <div className="mx-auto max-w-360 px-10 py-6 text-white">
+    <div className="mx-auto max-w-360 px-10 py-3 text-white">
 
       {/* Welcome */}
       <div className="mb-5">
@@ -21,7 +21,7 @@ export default function StudentPage() {
       </div>
 
       {/* Did You Know Banner — solid bright green matching Figma */}
-      <div className="mb-6 flex items-start gap-4 rounded-xl bg-[#0BCB51] px-6 py-5">
+      <div className="mb-6 flex items-start gap-4 rounded-xl bg-[#0BCB51] px-6 py-6">
         <Lightbulb size={22} className="mt-0.5 shrink-0 text-black" />
         <div>
           <p className="mb-1 text-xs font-bold uppercase tracking-widest text-black">
@@ -32,7 +32,7 @@ export default function StudentPage() {
       </div>
 
       {/* Monthly Challenge */}
-      <div className="mb-5 rounded-xl bg-[#191919] border border-[#525252] px-6 py-4">
+      <div className="mb-5 rounded-xl bg-[#191919] border border-[#525252] px-6 py-6">
         <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-[#F97316]">
           <Flame size={16} />
           This Month&apos;s Challenge

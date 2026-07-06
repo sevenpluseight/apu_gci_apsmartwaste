@@ -87,7 +87,7 @@ export default function EcoPointsPortal() {
   }
 
   return (
-    <div className="mx-auto max-w-360 px-10 py-6 text-white">
+    <div className="mx-auto max-w-360 px-10 py-3 text-white">
 
       {/* Header */}
       <div className="mb-5 flex items-start justify-between">
@@ -168,11 +168,17 @@ export default function EcoPointsPortal() {
       </div>
 
       {/* Activity Logs */}
-      <div className="rounded-xl bg-[#191919] border border-[#525252] px-6 py-5">
+      <div className="rounded-xl bg-[#191919] border border-[#525252] px-4 py-4">
         <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-white">
           Recent Activity Logs
         </div>
-        <div className="max-h-48 overflow-y-auto divide-y divide-[#2A2A2A]">
+        <div 
+          className="max-h-48 overflow-y-auto divide-y divide-[#2A2A2A] pr-2"
+          style={{
+            scrollbarWidth: "thin",
+            scrollbarColor: "#525252 #191919",
+          }}
+        >
           {logs.map((log) => (
             <div
               key={log.id}

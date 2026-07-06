@@ -29,7 +29,7 @@ export default function RecyclingGuidePage() {
   const { recyclingItems } = studentData;
 
   return (
-    <div className="mx-auto max-w-360 px-10 py-10 text-white">
+    <div className="mx-auto max-w-360 px-10 py-3 text-white">
 
       {/* Header */}
       <div className="mb-8">
