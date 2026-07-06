@@ -1,0 +1,22 @@
+{
+  "janitor": {
+    "name": "Janitor 6",
+    "role": "Cleaning Staff"
+  },
+  "date": "Monday, 6 July 2026",
+  "summary": {
+    "progressPercentage": 29,
+    "completedTasks": 2,
+    "totalTasks": 7,
+    "remainingBins": 14
+  },
+  "shift": {
+    "workingHours": "8:00 AM - 5:00 PM",
+    "assignedBlocks": ["Block B", "Block C", "Block E"]
+  },
+  "taskStatus": {
+    "inProgress": 2,
+    "upcoming": 3,
+    "completed": 2
+  }
+}

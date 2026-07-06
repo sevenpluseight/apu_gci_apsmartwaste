@@ -1,0 +1,35 @@
+[
+  {
+    "id": "RPT-1233",
+    "building": "Cafeteria A",
+    "floor": "Level 3",
+    "location": "Near Block E Lift",
+    "issue": "Plastic Bin Overflow",
+    "category": "Plastic",
+    "time": "11:00 AM",
+    "bins": 3,
+    "priority": "High"
+  },
+  {
+    "id": "RPT-1236",
+    "building": "Block B",
+    "floor": "Level 7",
+    "location": "Lift Area",
+    "issue": "Glass Bin Overflow",
+    "category": "Glass",
+    "time": "12:30 PM",
+    "bins": 1,
+    "priority": "High"
+  },
+  {
+    "id": "RPT-1235",
+    "building": "Block E",
+    "floor": "Level 4",
+    "location": "Corridor Area",
+    "issue": "Paper Bin Nearly Full",
+    "category": "Paper",
+    "time": "11:45 AM",
+    "bins": 1,
+    "priority": "Medium"
+  }
+]
