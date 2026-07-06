@@ -141,3 +141,20 @@
 .animate-shimmer {
   animation: shimmer 2s linear infinite;
 }
+
+@keyframes status-glow {
+  0%,
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+
+  50% {
+    opacity: 0.65;
+    filter: brightness(1.4);
+  }
+}
+
+.animate-status-glow {
+  animation: status-glow 1.8s ease-in-out infinite;
+}
