@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { Lightbulb, Flame, TriangleAlert, Coins } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
 import studentData from "@/mock/student/student.json";
 
 export default function StudentPage() {
@@ -21,7 +20,7 @@ export default function StudentPage() {
         </p>
       </div>
 
-      {/* Did You Know Banner — solid bright green matching Figma */}
+      {/* Did You Know Banner */}
       <div className="mb-6 flex items-start gap-4 rounded-xl bg-[#0BCB51] px-6 py-5">
         <Lightbulb size={22} className="mt-0.5 shrink-0 text-black" />
         <div>
@@ -45,10 +44,14 @@ export default function StudentPage() {
           <span>Your Progress</span>
           <span className="font-semibold text-white">{challenge.progress}%</span>
         </div>
-        <Progress
-          value={challenge.progress}
-          className="h-2 bg-[#2A2A2A] [&>div]:bg-[#0BCB51]"
-        />
+
+        {/* Plain div progress bar */}
+        <div className="h-2 w-full overflow-hidden rounded-full bg-[#2A2A2A]">
+          <div
+            className="h-full rounded-full bg-[#0BCB51] transition-all"
+            style={{ width: `${challenge.progress}%` }}
+          />
+        </div>
 
         <div className="mt-3 flex items-center justify-between text-xs text-[#B2B2B2]">
           <span>Reward: {challenge.reward}</span>
@@ -63,14 +66,9 @@ export default function StudentPage() {
         </h2>
         <div className="grid grid-cols-3 gap-4">
 
-          {/* Report a Bin */}
           <Link href="/student/report-overflow">
             <div className="group flex flex-col items-center justify-center gap-3 rounded-xl bg-[#191919] border border-[#525252] px-6 py-10 transition-all duration-200 hover:border-[#0BCB51]/60 cursor-pointer">
-              <TriangleAlert
-                size={28}
-                strokeWidth={1.5}
-                className="text-[#B2B2B2] transition-colors group-hover:text-[#0BCB51]"
-              />
+              <TriangleAlert size={28} strokeWidth={1.5} className="text-[#B2B2B2] transition-colors group-hover:text-[#0BCB51]" />
               <div className="text-center">
                 <p className="font-semibold text-white">Report a bin</p>
                 <p className="mt-1 text-xs text-[#B2B2B2]">Spotted an overflow?</p>
@@ -78,14 +76,9 @@ export default function StudentPage() {
             </div>
           </Link>
 
-          {/* View Eco-Points */}
           <Link href="/student/eco-points">
             <div className="group flex flex-col items-center justify-center gap-3 rounded-xl bg-[#191919] border border-[#525252] px-6 py-10 transition-all duration-200 hover:border-[#0BCB51]/60 cursor-pointer">
-              <Coins
-                size={28}
-                strokeWidth={1.5}
-                className="text-[#B2B2B2] transition-colors group-hover:text-[#0BCB51]"
-              />
+              <Coins size={28} strokeWidth={1.5} className="text-[#B2B2B2] transition-colors group-hover:text-[#0BCB51]" />
               <div className="text-center">
                 <p className="font-semibold text-white">View Eco-Points</p>
                 <p className="mt-1 text-xs text-[#B2B2B2]">Track your Eco-Points.</p>
@@ -93,7 +86,7 @@ export default function StudentPage() {
             </div>
           </Link>
 
-          {/* Empty third card — matches Figma */}
+          {/* Empty third card */}
           <div className="rounded-xl bg-[#191919] border border-[#525252] px-6 py-10" />
 
         </div>
