@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Lightbulb, Flame, TriangleAlert, Coins, ChevronRight } from "lucide-react";
+import { Lightbulb, Flame, TriangleAlert, Coins } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import studentData from "@/mock/student/student.json";
 
@@ -21,19 +21,19 @@ export default function StudentPage() {
         </p>
       </div>
 
-      {/* Did You Know Banner */}
-      <div className="mb-6 flex items-start gap-3 rounded-xl bg-[#0BCB51]/15 border border-[#0BCB51]/30 px-5 py-4">
-        <Lightbulb size={20} className="mt-0.5 shrink-0 text-[#0BCB51]" />
+      {/* Did You Know Banner — solid bright green matching Figma */}
+      <div className="mb-6 flex items-start gap-4 rounded-xl bg-[#0BCB51] px-6 py-5">
+        <Lightbulb size={22} className="mt-0.5 shrink-0 text-black" />
         <div>
-          <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-[#0BCB51]">
+          <p className="mb-1 text-xs font-bold uppercase tracking-widest text-black">
             Did You Know?
           </p>
-          <p className="text-sm leading-6 text-white">{didYouKnow}</p>
+          <p className="text-sm leading-6 text-black">{didYouKnow}</p>
         </div>
       </div>
 
       {/* Monthly Challenge */}
-      <div className="mb-8 rounded-xl bg-[#191919] border border-[#2A2A2A] px-6 py-5">
+      <div className="mb-8 rounded-xl bg-[#191919] border border-[#525252] px-6 py-5">
         <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-[#F97316]">
           <Flame size={16} />
           This Month&apos;s Challenge
@@ -65,7 +65,7 @@ export default function StudentPage() {
 
           {/* Report a Bin */}
           <Link href="/student/report-overflow">
-            <div className="group flex flex-col items-center justify-center gap-3 rounded-xl bg-[#191919] border border-[#2A2A2A] px-6 py-8 transition-all duration-200 hover:border-[#0BCB51]/50 hover:bg-[#191919]/80 cursor-pointer">
+            <div className="group flex flex-col items-center justify-center gap-3 rounded-xl bg-[#191919] border border-[#525252] px-6 py-10 transition-all duration-200 hover:border-[#0BCB51]/60 cursor-pointer">
               <TriangleAlert
                 size={28}
                 strokeWidth={1.5}
@@ -80,7 +80,7 @@ export default function StudentPage() {
 
           {/* View Eco-Points */}
           <Link href="/student/eco-points">
-            <div className="group flex flex-col items-center justify-center gap-3 rounded-xl bg-[#191919] border border-[#2A2A2A] px-6 py-8 transition-all duration-200 hover:border-[#0BCB51]/50 hover:bg-[#191919]/80 cursor-pointer">
+            <div className="group flex flex-col items-center justify-center gap-3 rounded-xl bg-[#191919] border border-[#525252] px-6 py-10 transition-all duration-200 hover:border-[#0BCB51]/60 cursor-pointer">
               <Coins
                 size={28}
                 strokeWidth={1.5}
@@ -93,20 +93,8 @@ export default function StudentPage() {
             </div>
           </Link>
 
-          {/* My Reports */}
-          <Link href="/student/report-overflow">
-            <div className="group flex flex-col items-center justify-center gap-3 rounded-xl bg-[#191919] border border-[#2A2A2A] px-6 py-8 transition-all duration-200 hover:border-[#0BCB51]/50 hover:bg-[#191919]/80 cursor-pointer">
-              <ChevronRight
-                size={28}
-                strokeWidth={1.5}
-                className="text-[#B2B2B2] transition-colors group-hover:text-[#0BCB51]"
-              />
-              <div className="text-center">
-                <p className="font-semibold text-white">My Reports</p>
-                <p className="mt-1 text-xs text-[#B2B2B2]">View report status.</p>
-              </div>
-            </div>
-          </Link>
+          {/* Empty third card — matches Figma */}
+          <div className="rounded-xl bg-[#191919] border border-[#525252] px-6 py-10" />
 
         </div>
       </div>
