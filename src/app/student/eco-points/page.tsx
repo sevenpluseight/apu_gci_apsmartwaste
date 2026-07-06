@@ -87,10 +87,10 @@ export default function EcoPointsPortal() {
   }
 
   return (
-    <div className="mx-auto max-w-360 px-10 py-10 text-white">
+    <div className="mx-auto max-w-360 px-10 py-6 text-white">
 
       {/* Header */}
-      <div className="mb-8 flex items-start justify-between">
+      <div className="mb-5 flex items-start justify-between">
         <div>
           <h1 className="text-3xl font-bold text-white">Eco-Points Portal</h1>
           <p className="mt-1 text-sm text-[#B2B2B2]">
@@ -107,7 +107,7 @@ export default function EcoPointsPortal() {
       </div>
 
       {/* Stats Banner — solid bright green matching Figma */}
-      <div className="mb-8 rounded-xl bg-[#0BCB51] px-8 py-6">
+      <div className="mb-5 rounded-xl bg-[#0BCB51] px-8 py-6">
         <div className="flex items-center justify-between">
           <div>
             <p className="mb-1 text-sm font-medium text-black/70">Your Eco Points</p>
@@ -136,7 +136,7 @@ export default function EcoPointsPortal() {
       </div>
 
       {/* Badges — only earned, with colored icon squares */}
-      <div className="mb-8">
+      <div className="mb-5">
         <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-white">
           <CircleCheck size={16} className="text-[#0BCB51]" />
           Your Badges
@@ -172,7 +172,7 @@ export default function EcoPointsPortal() {
         <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-white">
           Recent Activity Logs
         </div>
-        <div className="divide-y divide-[#2A2A2A]">
+        <div className="max-h-48 overflow-y-auto divide-y divide-[#2A2A2A]">
           {logs.map((log) => (
             <div
               key={log.id}
@@ -209,7 +209,11 @@ export default function EcoPointsPortal() {
                 <label className="text-sm font-medium text-white">
                   Item Type <span className="text-red-400">*</span>
                 </label>
-                <Select value={selectedItem} onValueChange={setSelectedItem} required>
+                <Select
+                  value={selectedItem}
+                  onValueChange={(value) => setSelectedItem(value ?? "")}
+                  required
+                >
                   <SelectTrigger className="border-[#525252] bg-[#111111] text-white">
                     <SelectValue placeholder="Select type" />
                   </SelectTrigger>

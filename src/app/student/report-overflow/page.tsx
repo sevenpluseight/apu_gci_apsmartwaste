@@ -84,7 +84,7 @@ export default function ReportOverflowPage() {
               <label className="text-sm font-medium text-white">
                 Building / Block <span className="text-red-400">*</span>
               </label>
-              <Select value={form.building} onValueChange={(v) => setForm({ ...form, building: v })} required>
+              <Select value={form.building} onValueChange={(v) => setForm({ ...form, building: v  ?? ""})} required>
                 <SelectTrigger className="border-[#525252] bg-[#111111] text-white">
                   <SelectValue placeholder="Select building" />
                 </SelectTrigger>
@@ -126,7 +126,7 @@ export default function ReportOverflowPage() {
               <label className="text-sm font-medium text-white">
                 Waste Category <span className="text-red-400">*</span>
               </label>
-              <Select value={form.wasteCategory} onValueChange={(v) => setForm({ ...form, wasteCategory: v })} required>
+              <Select value={form.wasteCategory} onValueChange={(v) => setForm({ ...form, wasteCategory: v  ?? ""})} required>
                 <SelectTrigger className="border-[#525252] bg-[#111111] text-white">
                   <SelectValue placeholder="Select category" />
                 </SelectTrigger>
@@ -142,7 +142,7 @@ export default function ReportOverflowPage() {
               <label className="text-sm font-medium text-white">
                 Issue Type <span className="text-red-400">*</span>
               </label>
-              <Select value={form.issueType} onValueChange={(v) => setForm({ ...form, issueType: v })} required>
+              <Select value={form.issueType} onValueChange={(v) => setForm({ ...form, issueType: v  ?? ""})} required>
                 <SelectTrigger className="border-[#525252] bg-[#111111] text-white">
                   <SelectValue placeholder="Select issue type" />
                 </SelectTrigger>

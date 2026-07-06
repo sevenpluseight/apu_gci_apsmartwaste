@@ -8,10 +8,10 @@ export default function StudentPage() {
   const { profile, challenge, didYouKnow } = studentData;
 
   return (
-    <div className="mx-auto max-w-360 px-10 py-10 text-white">
+    <div className="mx-auto max-w-360 px-10 py-6 text-white">
 
       {/* Welcome */}
-      <div className="mb-8">
+      <div className="mb-5">
         <h1 className="text-3xl font-bold text-white">
           Welcome, {profile.name}!
         </h1>
@@ -32,7 +32,7 @@ export default function StudentPage() {
       </div>
 
       {/* Monthly Challenge */}
-      <div className="mb-8 rounded-xl bg-[#191919] border border-[#525252] px-6 py-5">
+      <div className="mb-5 rounded-xl bg-[#191919] border border-[#525252] px-6 py-4">
         <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-[#F97316]">
           <Flame size={16} />
           This Month&apos;s Challenge
