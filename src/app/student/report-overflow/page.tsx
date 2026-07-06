@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { CircleCheck, Camera } from "lucide-react";
+import { CircleCheck, Camera, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -20,6 +20,7 @@ export default function ReportOverflowPage() {
 
   const [submitted, setSubmitted] = useState(false);
   const [photoName, setPhotoName] = useState<string | null>(null);
+  const [myReports, setMyReports] = useState(reports);
   const [form, setForm] = useState({
     building: "",
     floor: "",
@@ -36,6 +37,18 @@ export default function ReportOverflowPage() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    const newReport = {
+      id: `RPT-00${myReports.length + 1}`,
+      building: form.building,
+      floor: form.floor,
+      binLocation: form.binLocation,
+      wasteCategory: form.wasteCategory,
+      issueType: form.issueType,
+      description: form.description,
+      status: "Pending",
+      submittedAt: new Date().toISOString().split("T")[0],
+    };
+    setMyReports((prev) => [newReport, ...prev]);
     setSubmitted(true);
     setForm({
       building: "",
@@ -67,7 +80,6 @@ export default function ReportOverflowPage() {
 
           <div className="grid grid-cols-2 gap-5">
 
-            {/* Building */}
             <div className="flex flex-col gap-2">
               <label className="text-sm font-medium text-white">
                 Building / Block <span className="text-red-400">*</span>
@@ -84,7 +96,6 @@ export default function ReportOverflowPage() {
               </Select>
             </div>
 
-            {/* Floor */}
             <div className="flex flex-col gap-2">
               <label className="text-sm font-medium text-white">
                 Floor <span className="text-red-400">*</span>
@@ -98,7 +109,6 @@ export default function ReportOverflowPage() {
               />
             </div>
 
-            {/* Bin Location */}
             <div className="flex flex-col gap-2">
               <label className="text-sm font-medium text-white">
                 Bin Location <span className="text-red-400">*</span>
@@ -112,7 +122,6 @@ export default function ReportOverflowPage() {
               />
             </div>
 
-            {/* Waste Category */}
             <div className="flex flex-col gap-2">
               <label className="text-sm font-medium text-white">
                 Waste Category <span className="text-red-400">*</span>
@@ -129,7 +138,6 @@ export default function ReportOverflowPage() {
               </Select>
             </div>
 
-            {/* Issue Type */}
             <div className="col-span-2 flex flex-col gap-2">
               <label className="text-sm font-medium text-white">
                 Issue Type <span className="text-red-400">*</span>
@@ -146,7 +154,6 @@ export default function ReportOverflowPage() {
               </Select>
             </div>
 
-            {/* Description */}
             <div className="col-span-2 flex flex-col gap-2">
               <label className="text-sm font-medium text-white">
                 Description <span className="text-red-400">*</span>
@@ -161,7 +168,6 @@ export default function ReportOverflowPage() {
               />
             </div>
 
-            {/* Photo Upload */}
             <div className="col-span-2 flex flex-col gap-2">
               <label className="text-sm font-medium text-white">
                 Photo Upload <span className="text-[#B2B2B2]">(Optional)</span>
@@ -186,7 +192,6 @@ export default function ReportOverflowPage() {
 
           </div>
 
-          {/* Success message */}
           {submitted && (
             <div className="mt-5 flex items-center gap-2 rounded-lg bg-[#0BCB51]/15 border border-[#0BCB51]/30 px-4 py-3 text-sm text-[#0BCB51]">
               <CircleCheck size={16} />
@@ -194,7 +199,6 @@ export default function ReportOverflowPage() {
             </div>
           )}
 
-          {/* Submit Button — matches Figma style */}
           <div className="mt-6 flex justify-end">
             <Button
               type="submit"
@@ -227,7 +231,7 @@ export default function ReportOverflowPage() {
             </ul>
           </div>
 
-          {/* Your Impact — light green background matching Figma */}
+          {/* Your Impact */}
           <div className="rounded-xl bg-[#E6FFF0] px-6 py-5">
             <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#0BCB51]">
               <CircleCheck size={16} />
@@ -235,9 +239,48 @@ export default function ReportOverflowPage() {
             </div>
             <p className="text-sm text-[#166534]">
               You&apos;ve submitted{" "}
-              <span className="font-semibold">{reports.length} reports</span>{" "}
+              <span className="font-semibold">{myReports.length} reports</span>{" "}
               this semester! Keep up the great work :)
             </p>
+          </div>
+
+          {/* My Recent Reports */}
+          <div className="rounded-xl bg-[#191919] border border-[#525252] px-6 py-5">
+            <h3 className="mb-4 text-sm font-semibold text-white">My Recent Reports</h3>
+            {myReports.length === 0 ? (
+              <p className="text-sm text-[#B2B2B2]">No reports submitted yet.</p>
+            ) : (
+              <div className="space-y-3">
+                {myReports.map((report) => (
+                  <div
+                    key={report.id}
+                    className="flex items-start justify-between gap-3 rounded-lg bg-[#111111] px-4 py-3"
+                  >
+                    <div className="flex items-start gap-3">
+                      <FileText size={14} className="mt-0.5 shrink-0 text-[#B2B2B2]" />
+                      <div>
+                        <p className="text-xs font-medium text-white">
+                          {report.building} — {report.floor}
+                        </p>
+                        <p className="text-xs text-[#B2B2B2]">{report.issueType}</p>
+                        <p className="mt-0.5 text-xs text-[#525252]">{report.submittedAt}</p>
+                      </div>
+                    </div>
+                    <span
+                      className={`shrink-0 rounded-full px-2 py-0.5 text-xs font-medium ${
+                        report.status === "Resolved"
+                          ? "bg-[#0BCB51]/15 text-[#0BCB51]"
+                          : report.status === "In Progress"
+                          ? "bg-yellow-500/15 text-yellow-400"
+                          : "bg-[#525252]/30 text-[#B2B2B2]"
+                      }`}
+                    >
+                      {report.status}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
         </div>
