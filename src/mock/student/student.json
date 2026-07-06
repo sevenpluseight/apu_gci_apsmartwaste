@@ -1,0 +1,129 @@
+{
+  "profile": {
+    "name": "Jane Doe",
+    "studentId": "TP079062",
+    "intake": "APU3F2605SE",
+    "role": "Student",
+    "ecoPoints": 1692,
+    "weekStreak": 2
+  },
+  "challenge": {
+    "title": "Plastic-Free July",
+    "description": "Avoid single-use plastics for the entire month. Every swapped item counts toward a cleaner campus.",
+    "progress": 79,
+    "reward": "Recycling Supporter Badge",
+    "participants": 367
+  },
+  "didYouKnow": "Rinsing containers before recycling prevents contamination of entire recycling batches. A small step that makes a big difference!",
+  "badges": [
+    {
+      "id": 1,
+      "name": "Green Beginner",
+      "description": "Complete your first eco activity",
+      "earnedOn": "2026-05-13",
+      "earned": true
+    },
+    {
+      "id": 2,
+      "name": "Recycling Support",
+      "description": "Recycle 20+ items correctly",
+      "earnedOn": "2026-06-13",
+      "earned": true
+    },
+    {
+      "id": 3,
+      "name": "Eco Hero",
+      "description": "Earn 1000+ Eco Points",
+      "earnedOn": "2026-07-01",
+      "earned": true
+    },
+    {
+      "id": 4,
+      "name": "Campus Champion",
+      "description": "Maintain a 4-week streak",
+      "earnedOn": null,
+      "earned": false
+    },
+    {
+      "id": 5,
+      "name": "Zero Waste",
+      "description": "Submit 10 overflow reports",
+      "earnedOn": null,
+      "earned": false
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": 1,
+      "action": "Recycled Plastic Bottles",
+      "points": 10,
+      "timestamp": "Today, 9:26 AM"
+    },
+    {
+      "id": 2,
+      "action": "Recycled Paper",
+      "points": 5,
+      "timestamp": "Today, 9:26 AM"
+    },
+    {
+      "id": 3,
+      "action": "Recycled Aluminium Cans",
+      "points": 20,
+      "timestamp": "Today, 9:26 AM"
+    },
+    {
+      "id": 4,
+      "action": "Recycled Glass Bottles",
+      "points": 15,
+      "timestamp": "Yesterday, 3:14 PM"
+    },
+    {
+      "id": 5,
+      "action": "Recycled Cardboard",
+      "points": 8,
+      "timestamp": "Yesterday, 11:02 AM"
+    }
+  ],
+  "reports": [
+    {
+      "id": "RPT-001",
+      "building": "Block A",
+      "floor": "Level 2",
+      "binLocation": "Near Lecture Hall A201",
+      "wasteCategory": "General Waste",
+      "issueType": "Overflowing",
+      "description": "Bin is overflowing near the main entrance of A201.",
+      "status": "Resolved",
+      "submittedAt": "2026-06-28"
+    },
+    {
+      "id": "RPT-002",
+      "building": "Cafeteria",
+      "floor": "Ground Floor",
+      "binLocation": "Near Food Stall 3",
+      "wasteCategory": "Recycling",
+      "issueType": "Overflowing",
+      "description": "Recycling bin full since morning.",
+      "status": "In Progress",
+      "submittedAt": "2026-07-01"
+    }
+  ],
+  "recyclingItems": [
+    { "type": "Plastic Bottles", "points": 10 },
+    { "type": "Aluminium Cans", "points": 20 },
+    { "type": "Paper", "points": 5 },
+    { "type": "Cardboard", "points": 8 },
+    { "type": "Glass Bottles", "points": 15 },
+    { "type": "Electronic Waste", "points": 30 }
+  ],
+  "buildings": [
+    "Block A", "Block B", "Block C", "Block D",
+    "Cafeteria", "Library", "Sports Complex", "Student Hub"
+  ],
+  "wasteCategories": [
+    "General Waste", "Recycling", "Food Waste", "Hazardous"
+  ],
+  "issueTypes": [
+    "Overflowing", "Damaged Bin", "Missing Bin", "Bad Odour", "Other"
+  ]
+}
