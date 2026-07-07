@@ -208,8 +208,8 @@ export default function EcoPointsPortal() {
       </div> */}
 
       {/* Log Activity Dialog — 2 column layout matching Figma */}
-      {/* <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="border-[#525252] bg-[#191919] text-white sm:max-w-lg">
+      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+        {/* <DialogContent className="border-[#525252] bg-[#191919] text-white sm:max-w-lg">
           <DialogHeader>
             <DialogTitle className="text-lg font-bold text-white">
               Log Recycling Activity
@@ -281,8 +281,8 @@ export default function EcoPointsPortal() {
               ➤ Submit
             </Button>
           </form>
-        </DialogContent>
-      </Dialog> */}
+        </DialogContent> */}
+      </Dialog> 
     </div>
   );
 }
