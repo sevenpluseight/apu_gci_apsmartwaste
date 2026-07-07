@@ -177,7 +177,7 @@ export default function EcoPointsPortal() {
       </div> */}
 
       {/* Activity Logs */}
-      <div className="rounded-xl bg-[#191919] border border-[#525252] px-4 py-4">
+      {/* <div className="rounded-xl bg-[#191919] border border-[#525252] px-4 py-4">
         <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-white">
           Recent Activity Logs
         </div>
@@ -205,10 +205,10 @@ export default function EcoPointsPortal() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Log Activity Dialog — 2 column layout matching Figma */}
-      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+      {/* <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
         <DialogContent className="border-[#525252] bg-[#191919] text-white sm:max-w-lg">
           <DialogHeader>
             <DialogTitle className="text-lg font-bold text-white">
@@ -216,10 +216,10 @@ export default function EcoPointsPortal() {
             </DialogTitle>
           </DialogHeader>
 
-          <form onSubmit={handleLogActivity} className="mt-2 space-y-5">
+          <form onSubmit={handleLogActivity} className="mt-2 space-y-5"> */}
 
             {/* Item Type + Quantity side by side — matches Figma */}
-            <div className="grid grid-cols-2 gap-4">
+            {/* <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col gap-2">
                 <label className="text-sm font-medium text-white">
                   Item Type <span className="text-red-400">*</span>
@@ -256,25 +256,25 @@ export default function EcoPointsPortal() {
                   className="border-[#525252] bg-[#111111] text-white placeholder:text-[#525252]"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Points preview */}
-            <p className="text-sm text-[#B2B2B2]">
+            {/* <p className="text-sm text-[#B2B2B2]">
               You&apos;ll Earn{" "}
               <span className="font-bold text-white">
                 +{estimatedPoints > 0 ? estimatedPoints : "XX"} Eco Points
               </span>
-            </p>
+            </p> */}
 
             {/* Success */}
-            {logSubmitted && (
+            {/* {logSubmitted && (
               <div className="flex items-center gap-2 rounded-lg bg-[#0BCB51]/15 border border-[#0BCB51]/30 px-4 py-3 text-sm text-[#0BCB51]">
                 <CircleCheck size={16} />
                 Activity logged successfully!
               </div>
-            )}
+            )} */}
 
-            <Button
+            {/* <Button
               type="submit"
               className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#0BCB51] font-semibold text-black hover:bg-[#0BCB51]/90 cursor-pointer"
             >
@@ -282,7 +282,7 @@ export default function EcoPointsPortal() {
             </Button>
           </form>
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
     </div>
   );
 }
