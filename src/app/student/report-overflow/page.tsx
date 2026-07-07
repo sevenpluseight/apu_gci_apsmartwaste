@@ -90,7 +90,7 @@ export default function ReportOverflowPage() {
                 </SelectTrigger>
                 <SelectContent className="border-[#525252] bg-[#191919] text-white">
                   {buildings.map((b) => (
-                    <SelectItem key={b} value={b} className="focus:bg-[#2A2A2A]">{b}</SelectItem>
+                    <SelectItem key={b} value={b} className="cursor-pointer focus:bg-[#0BCB51] focus:text-black data-highlighted:bg-[#0BCB51] data-highlighted:text-black"> {b} </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
@@ -132,7 +132,7 @@ export default function ReportOverflowPage() {
                 </SelectTrigger>
                 <SelectContent className="border-[#525252] bg-[#191919] text-white">
                   {wasteCategories.map((c) => (
-                    <SelectItem key={c} value={c} className="focus:bg-[#2A2A2A]">{c}</SelectItem>
+                    <SelectItem key={c} value={c} className="cursor-pointer focus:bg-[#0BCB51] focus:text-black data-highlighted:bg-[#0BCB51] data-highlighted:text-black"> {c} </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
@@ -148,7 +148,7 @@ export default function ReportOverflowPage() {
                 </SelectTrigger>
                 <SelectContent className="border-[#525252] bg-[#191919] text-white">
                   {issueTypes.map((t) => (
-                    <SelectItem key={t} value={t} className="focus:bg-[#2A2A2A]">{t}</SelectItem>
+                    <SelectItem key={t} value={t} className="cursor-pointer focus:bg-[#0BCB51] focus:text-black data-highlighted:bg-[#0BCB51] data-highlighted:text-black"> {t} </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
