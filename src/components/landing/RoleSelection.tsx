@@ -11,8 +11,8 @@ const roles = [
       "Report waste issues and participate in sustainable recycling initiatives across the campus.",
     features: [
       "Report Overflowing Bins",
-      "View Eco-Points",
-      "Track Participation & Badges",
+      "View & Redeem Eco-Points",
+      "Track Recycling Activity",
     ],
     button: "Explore Student",
   },
