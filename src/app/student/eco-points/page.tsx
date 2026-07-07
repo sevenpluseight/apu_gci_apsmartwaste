@@ -89,7 +89,7 @@ export default function EcoPointsPortal() {
   }
 
   return (
-    <div className="mx-auto max-w-360 px-10 py-3 text-white">
+    <div className="mx-auto max-w-360 px-10 py-6 text-white">
 
       {/* Header */}
       <div className="mb-5 flex items-start justify-between">
@@ -135,7 +135,7 @@ export default function EcoPointsPortal() {
           Recent Activity Logs
         </div>
         <div 
-          className="max-h-64 overflow-y-auto divide-y divide-[#2A2A2A] pr-2"
+          className="max-h-[55vh] overflow-y-auto divide-y divide-[#2A2A2A] pr-2"
           style={{
             scrollbarWidth: "thin",
             scrollbarColor: "#525252 #191919",
