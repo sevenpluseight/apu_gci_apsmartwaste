@@ -31,11 +31,11 @@ export default function StudentPage() {
         </div>
       </div>
 
-      {/* Impact Banner (Light Green Theme) */}
+      {/* Impact Banner (Centered & Gamified) */}
       <div className="mb-8 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-[#0BCB51]/20 rounded-xl bg-[#E6FFF0] border border-[#0BCB51]/30 shadow-sm">
         
         {/* Waste Diverted */}
-        <div className="flex-1 px-8 py-6">
+        <div className="flex-1 px-8 py-6 flex flex-col items-center justify-center text-center">
           <div className="flex items-center gap-2 mb-2">
             <Activity size={16} className="text-[#0BCB51]" />
             <span className="text-xs font-semibold uppercase tracking-widest text-[#166534]">Waste Diverted</span>
@@ -43,27 +43,38 @@ export default function StudentPage() {
           <p className="text-3xl font-bold text-black">2.4 <span className="text-base font-normal text-black/60">kg</span></p>
         </div>
 
-        {/* Total Eco Points */}
-        <div className="flex-1 px-8 py-6">
+        {/* Total Eco-Points */}
+        <div className="flex-1 px-8 py-6 flex flex-col items-center justify-center text-center">
           <div className="flex items-center gap-2 mb-2">
             <Coins size={16} className="text-[#0BCB51]" />
             <span className="text-xs font-semibold uppercase tracking-widest text-[#166534]">Total Eco-Points</span>
           </div>
-          <div className="flex items-baseline gap-3">
+          <div className="flex items-baseline gap-2">
             <p className="text-3xl font-bold text-[#0BCB51]">{profile.ecoPoints}</p>
-            <span className="text-xs font-bold text-[#166534] bg-[#0BCB51]/20 px-2 py-0.5 rounded-full">
-              +145 this week
+            <span className="text-[10px] font-bold text-[#166534] bg-[#0BCB51]/20 px-2 py-0.5 rounded-full">
+              +145/wk
             </span>
           </div>
         </div>
 
-        {/* Eco Equivalent */}
-        <div className="flex-1 px-8 py-6">
+        {/* Eco Equivalent (Upgraded with Progress Bar!) */}
+        <div className="flex-1 px-8 py-6 flex flex-col items-center justify-center text-center">
           <div className="flex items-center gap-2 mb-2">
             <Leaf size={16} className="text-[#0BCB51]" />
             <span className="text-xs font-semibold uppercase tracking-widest text-[#166534]">Eco Equivalent</span>
           </div>
           <p className="text-3xl font-bold text-[#0BCB51]">1 <span className="text-base font-normal text-[#166534]/70">Tree Saved</span></p>
+          
+          {/* Progress to next tree (assuming 10kg = 1 tree, so 2.4kg = 24%) */}
+          <div className="mt-3 w-full max-w-35">
+            <div className="flex justify-between text-[10px] font-bold text-[#166534] mb-1.5 uppercase tracking-wide">
+              <span>Next Tree</span>
+              <span>24%</span>
+            </div>
+            <div className="h-1.5 w-full rounded-full bg-[#0BCB51]/20 overflow-hidden">
+              <div className="h-full rounded-full bg-[#0BCB51]" style={{ width: "24%" }}></div>
+            </div>
+          </div>
         </div>
 
       </div>
