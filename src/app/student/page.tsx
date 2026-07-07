@@ -31,7 +31,7 @@ export default function StudentPage() {
         </div>
       </div>
 
-      {/* Impact Banner (Original Clean Layout) */}
+      {/* Impact Banner (Clean Layout + Right-Aligned Progress Bar + Emoji) */}
       <div className="mb-8 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-[#0BCB51]/20 rounded-xl bg-[#E6FFF0] border border-[#0BCB51]/30 shadow-sm">
         
         {/* Waste Diverted */}
@@ -63,7 +63,24 @@ export default function StudentPage() {
             <Leaf size={16} className="text-[#0BCB51]" />
             <span className="text-xs font-semibold uppercase tracking-widest text-[#166534]">Eco Equivalent</span>
           </div>
-          <p className="text-3xl font-bold text-[#0BCB51]">1 <span className="text-base font-normal text-[#166534]/70">Tree Saved</span></p>
+          
+          {/* Flex container with justify-between to push the progress bar to the right */}
+          <div className="flex items-center justify-between w-full">
+            <p className="text-3xl font-bold text-[#0BCB51]">
+              1 <span className="text-base font-normal text-[#166534]/70">Tree Saved 🌳</span>
+            </p>
+            
+            {/* Compact Inline Progress Bar anchored to the right */}
+            <div className="flex flex-col w-24 mt-1">
+              <div className="flex justify-between text-[9px] font-bold text-[#166534] mb-1 uppercase tracking-wide">
+                <span>Next</span>
+                <span>24%</span>
+              </div>
+              <div className="h-1.5 w-full rounded-full bg-[#0BCB51]/20 overflow-hidden">
+                <div className="h-full rounded-full bg-[#0BCB51]" style={{ width: "24%" }}></div>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
