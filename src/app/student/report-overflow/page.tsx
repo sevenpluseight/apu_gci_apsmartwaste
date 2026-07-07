@@ -257,8 +257,8 @@ export default function ReportOverflowPage() {
               <CircleCheck size={16} />
               Community Impact
             </div>
-            <p className="text-sm leading-relaxed text-[#166534]">
-              You have submitted <span className="font-bold">{reportsToday} reports</span> today. Thank you for playing your part in keeping the APU campus clean and beautiful!
+            <p className="text-sm text-[#166534]">
+              <span className="font-bold">{reportsToday} reports</span> today! The campus cleaners secretly owe you a high five. ✋
             </p>
           </div>
 
