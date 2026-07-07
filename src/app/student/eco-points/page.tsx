@@ -17,7 +17,7 @@ export default function EcoPointsPortal() {
 
   const [points, setPoints] = useState(profile.ecoPoints);
   const [logs, setLogs] = useState(activityLogs);
-  const [activitiesDone, setActivitiesDone] = useState(activityLogs.length);
+  // const [activitiesDone, setActivitiesDone] = useState(activityLogs.length);
   
   const [dialogOpen, setDialogOpen] = useState(false);
   const [quantity, setQuantity] = useState("");
@@ -26,6 +26,11 @@ export default function EcoPointsPortal() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
+
+  // Count only positive point transactions that happened "Today"
+  const dropsTodayCount = logs.filter(
+    (log) => log.timestamp.includes("Today") && log.points > 0
+  ).length;
 
   function handleConvert(e: React.FormEvent) {
     e.preventDefault();
@@ -57,7 +62,8 @@ export default function EcoPointsPortal() {
 
       // Update Points and Logs
       setPoints((prev) => prev - convertAmount);
-      setActivitiesDone((prev) => prev + 1);
+      // setActivitiesDone((prev) => prev + 1);
+      setPoints((prev) => prev - convertAmount);
       setLogs((prev) => [
         {
           id: prev.length + 1,
@@ -111,12 +117,12 @@ export default function EcoPointsPortal() {
               {points.toLocaleString()}
             </p>
             <p className="mt-1 text-xs text-black/70">
-              {activitiesDone} recycling drops today.
+              {dropsTodayCount} recycling drops today.
             </p>
           </div>
           <div className="flex gap-12">
             <div className="text-center">
-              <p className="text-3xl font-bold text-black">{activitiesDone}</p>
+              <p className="text-3xl font-bold text-black">{dropsTodayCount}</p>
               <p className="text-xs text-black/70 uppercase font-semibold tracking-wider">Drops Today</p>
             </div>
           </div>
