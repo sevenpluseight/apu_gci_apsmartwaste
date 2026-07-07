@@ -158,3 +158,17 @@
 .animate-status-glow {
   animation: status-glow 1.8s ease-in-out infinite;
 }
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-80px);
+  }
+
+  50% {
+    transform: translateY(260px);
+  }
+
+  100% {
+    transform: translateY(-80px);
+  }
+}
