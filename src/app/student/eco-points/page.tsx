@@ -10,13 +10,13 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+// import {
+//   Select,
+//   SelectContent,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import studentData from "@/mock/student/student.json";
 
@@ -38,55 +38,57 @@ import studentData from "@/mock/student/student.json";
 
 export default function EcoPointsPortal() {
   // const { profile, badges, activityLogs, recyclingItems } = studentData;
-  const { profile, activityLogs, recyclingItems } = studentData;
+  const { profile, activityLogs} = studentData;
 
   // const earnedBadges = badges.filter((b) => b.earned);
 
   const [points, setPoints] = useState(profile.ecoPoints);
-  const [logs, setLogs] = useState(activityLogs);
-  const [activitiesDone, setActivitiesDone] = useState(activityLogs.length);
+  // const [logs, setLogs] = useState(activityLogs);
+  const [logs] = useState(activityLogs);
+  // const [activitiesDone, setActivitiesDone] = useState(activityLogs.length);
+  const [activitiesDone] = useState(activityLogs.length);
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState("");
+  // const [selectedItem, setSelectedItem] = useState("");
   const [quantity, setQuantity] = useState("");
   const [logSubmitted, setLogSubmitted] = useState(false);
 
-  const selectedItemData = recyclingItems.find((item) => item.type === selectedItem);
-  const estimatedPoints = selectedItemData
-    ? selectedItemData.points * (parseInt(quantity) || 0)
-    : 0;
+  // const selectedItemData = recyclingItems.find((item) => item.type === selectedItem);
+  // const estimatedPoints = selectedItemData
+  //   ? selectedItemData.points * (parseInt(quantity) || 0)
+  //   : 0;
 
-  function handleLogActivity(e: React.FormEvent) {
-    e.preventDefault();
-    if (!selectedItem || !quantity || parseInt(quantity) <= 0) return;
+  // function handleLogActivity(e: React.FormEvent) {
+  //   e.preventDefault();
+  //   if (!selectedItem || !quantity || parseInt(quantity) <= 0) return;
 
-    const earned = estimatedPoints;
-    const now = new Date();
-    const timeStr = now.toLocaleTimeString("en-US", {
-      hour: "numeric",
-      minute: "2-digit",
-      hour12: true,
-    });
+  //   const earned = estimatedPoints;
+  //   const now = new Date();
+  //   const timeStr = now.toLocaleTimeString("en-US", {
+  //     hour: "numeric",
+  //     minute: "2-digit",
+  //     hour12: true,
+  //   });
 
-    setPoints((prev) => prev + earned);
-    setActivitiesDone((prev) => prev + 1);
-    setLogs((prev) => [
-      {
-        id: prev.length + 1,
-        action: `Recycled ${selectedItem}`,
-        points: earned,
-        timestamp: `Today, ${timeStr}`,
-      },
-      ...prev,
-    ]);
+  //   setPoints((prev) => prev + earned);
+  //   setActivitiesDone((prev) => prev + 1);
+  //   setLogs((prev) => [
+  //     {
+  //       id: prev.length + 1,
+  //       action: `Recycled ${selectedItem}`,
+  //       points: earned,
+  //       timestamp: `Today, ${timeStr}`,
+  //     },
+  //     ...prev,
+  //   ]);
 
-    setLogSubmitted(true);
-    setTimeout(() => {
-      setLogSubmitted(false);
-      setDialogOpen(false);
-      setSelectedItem("");
-      setQuantity("");
-    }, 1500);
-  }
+  //   setLogSubmitted(true);
+  //   setTimeout(() => {
+  //     setLogSubmitted(false);
+  //     setDialogOpen(false);
+  //     setSelectedItem("");
+  //     setQuantity("");
+  //   }, 1500);
+  // }
 
   return (
     <div className="mx-auto max-w-360 px-10 py-3 text-white">
@@ -177,7 +179,7 @@ export default function EcoPointsPortal() {
       </div> */}
 
       {/* Activity Logs */}
-      {/* <div className="rounded-xl bg-[#191919] border border-[#525252] px-4 py-4">
+      <div className="rounded-xl bg-[#191919] border border-[#525252] px-4 py-4">
         <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-white">
           Recent Activity Logs
         </div>
@@ -205,7 +207,7 @@ export default function EcoPointsPortal() {
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
 
       {/* Log Activity Dialog — 2 column layout matching Figma */}
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
@@ -282,6 +284,68 @@ export default function EcoPointsPortal() {
             </Button>
           </form>
         </DialogContent> */}
+        <DialogContent className="border-[#525252] bg-[#191919] text-white sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-lg font-bold text-white text-center">
+              Convert to APCard Balance
+            </DialogTitle>
+          </DialogHeader>
+
+          <form onSubmit={(e) => {
+            e.preventDefault();
+            const convertAmount = parseInt(quantity) || 0;
+            if (convertAmount <= 0 || convertAmount > points) return;
+            setPoints(prev => prev - convertAmount);
+            setLogSubmitted(true);
+            setTimeout(() => {
+              setLogSubmitted(false);
+              setDialogOpen(false);
+              setQuantity("");
+            }, 2000);
+          }} className="mt-4 space-y-6">
+            
+            <div className="rounded-lg bg-[#111111] p-4 text-center border border-[#2A2A2A]">
+              <p className="text-sm text-[#B2B2B2]">Available Eco-Points</p>
+              <p className="text-3xl font-bold text-[#0BCB51] mt-1">{points.toLocaleString()}</p>
+              <p className="text-xs text-[#525252] mt-2">Conversion Rate: 100 Points = RM 1.00</p>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label className="text-sm font-medium text-white">
+                Points to Convert
+              </label>
+              <Input
+                type="number"
+                min={100}
+                step={100}
+                max={points}
+                placeholder="Minimum 100 points"
+                value={quantity}
+                onChange={(e) => setQuantity(e.target.value)}
+                required
+                className="border-[#525252] bg-[#111111] text-white placeholder:text-[#525252]"
+              />
+              <p className="text-right text-sm text-[#B2B2B2]">
+                You will receive: <span className="font-bold text-white">RM {((parseInt(quantity) || 0) / 100).toFixed(2)}</span>
+              </p>
+            </div>
+
+            {logSubmitted && (
+              <div className="flex items-center justify-center gap-2 rounded-lg bg-[#0BCB51]/15 border border-[#0BCB51]/30 px-4 py-3 text-sm text-[#0BCB51]">
+                <CircleCheck size={16} />
+                Successfully transferred to APCard!
+              </div>
+            )}
+
+            <Button
+              type="submit"
+              disabled={logSubmitted || !quantity || parseInt(quantity) > points}
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#0BCB51] font-semibold text-black hover:bg-[#0BCB51]/90 disabled:opacity-50"
+            >
+              {logSubmitted ? "Processing..." : "Confirm Transfer"}
+            </Button>
+          </form>
+        </DialogContent>
       </Dialog> 
     </div>
   );
