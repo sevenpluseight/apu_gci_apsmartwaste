@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Lightbulb, Flame, TriangleAlert, Coins, BookOpen } from "lucide-react";
+// import { Lightbulb, Flame, TriangleAlert, Coins, BookOpen } from "lucide-react";
 import studentData from "@/mock/student/student.json";
+import { Lightbulb, TriangleAlert, Coins} from "lucide-react";
 
 export default function StudentPage() {
-  const { profile, challenge, didYouKnow } = studentData;
+  // const { profile, challenge, didYouKnow } = studentData;
+  const { profile, didYouKnow } = studentData;
 
   return (
     <div className="mx-auto max-w-360 px-10 py-3 text-white">
@@ -32,7 +34,7 @@ export default function StudentPage() {
       </div>
 
       {/* Monthly Challenge */}
-      <div className="mb-5 rounded-xl bg-[#191919] border border-[#525252] px-6 py-6">
+      {/* <div className="mb-5 rounded-xl bg-[#191919] border border-[#525252] px-6 py-6">
         <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-[#F97316]">
           <Flame size={16} />
           This Month&apos;s Challenge
@@ -43,10 +45,10 @@ export default function StudentPage() {
         <div className="mb-2 flex items-center justify-between text-xs text-[#B2B2B2]">
           <span>Your Progress</span>
           <span className="font-semibold text-white">{challenge.progress}%</span>
-        </div>
+        </div> */}
 
         {/* Plain div progress bar */}
-        <div className="h-2 w-full overflow-hidden rounded-full bg-[#2A2A2A]">
+        {/* <div className="h-2 w-full overflow-hidden rounded-full bg-[#2A2A2A]">
           <div
             className="h-full rounded-full bg-[#0BCB51] transition-all"
             style={{ width: `${challenge.progress}%` }}
@@ -57,7 +59,7 @@ export default function StudentPage() {
           <span>Reward: {challenge.reward}</span>
           <span>{challenge.participants.toLocaleString()} students joined</span>
         </div>
-      </div>
+      </div> */}
 
       {/* Quick Access */}
       <div>
@@ -97,7 +99,7 @@ export default function StudentPage() {
           </Link>
 
           {/* Third card */}
-          <Link href="/student/recycling-guide">
+          {/* <Link href="/student/recycling-guide">
             <div className="group flex flex-col items-center justify-center gap-3 rounded-xl bg-[#191919] border border-[#525252] px-6 py-10 transition-all duration-200 hover:border-[#0BCB51]/60 cursor-pointer">
               <BookOpen size={28} strokeWidth={1.5} className="text-[#B2B2B2] transition-colors group-hover:text-[#0BCB51]" />
               <div className="text-center">
@@ -105,7 +107,7 @@ export default function StudentPage() {
                 <p className="mt-1 text-xs text-[#B2B2B2]">What goes where?</p>
               </div>
             </div>
-          </Link>
+          </Link> */}
 
         </div>
       </div>
