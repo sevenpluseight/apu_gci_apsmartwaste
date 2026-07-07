@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import studentData from "@/mock/student/student.json";
-import { Lightbulb, TriangleAlert, Coins, Activity, Leaf, MapPin, Clock } from "lucide-react";
+import { Lightbulb, TriangleAlert, Coins, Activity, Leaf} from "lucide-react";
 
 export default function StudentPage() {
   const { profile, didYouKnow } = studentData;
@@ -85,7 +85,7 @@ export default function StudentPage() {
 
       </div>
 
-      {/* Quick Access */}
+      {/* Quick Access*/}
       <div>
         <h2 className="mb-4 text-sm font-semibold uppercase tracking-widest text-[#B2B2B2]">
           Quick Access
@@ -93,35 +93,34 @@ export default function StudentPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           
           <Link href="/student/report-overflow">
-            <div className="group flex h-full flex-col items-center justify-center gap-3 rounded-xl bg-[#191919] border border-[#525252] px-6 py-10 transition-all duration-200 hover:border-[#0BCB51]/60 cursor-pointer">
+            <div className="group flex flex-col items-center justify-center gap-4 rounded-xl bg-[#191919] border border-[#525252] px-6 py-16 transition-all duration-200 hover:border-[#0BCB51]/60 cursor-pointer">
               <TriangleAlert
-                size={28}
+                size={32}
                 strokeWidth={1.5}
                 className="text-[#B2B2B2] transition-colors group-hover:text-[#0BCB51]"
               />
               <div className="text-center">
-                <p className="font-semibold text-white">Report a bin</p>
-                <p className="mt-1 text-xs text-[#B2B2B2]">Spotted an overflow?</p>
+                <p className="text-lg font-semibold text-white">Report a bin</p>
+                <p className="mt-1 text-sm text-[#B2B2B2]">Spotted an overflow?</p>
               </div>
             </div>
           </Link>
 
           <Link href="/student/eco-points">
-            <div className="group flex h-full flex-col items-center justify-center gap-3 rounded-xl bg-[#191919] border border-[#525252] px-6 py-10 transition-all duration-200 hover:border-[#0BCB51]/60 cursor-pointer">
+            <div className="group flex flex-col items-center justify-center gap-4 rounded-xl bg-[#191919] border border-[#525252] px-6 py-16 transition-all duration-200 hover:border-[#0BCB51]/60 cursor-pointer">
               <Coins
-                size={28}
+                size={32}
                 strokeWidth={1.5}
                 className="text-[#B2B2B2] transition-colors group-hover:text-[#0BCB51]"
               />
               <div className="text-center">
-                <p className="font-semibold text-white">View Eco-Points</p>
-                <p className="mt-1 text-xs text-[#B2B2B2]">Track your balance.</p>
+                <p className="text-lg font-semibold text-white">View Eco-Points</p>
+                <p className="mt-1 text-sm text-[#B2B2B2]">Track your balance.</p>
               </div>
             </div>
           </Link>
 
         </div>
-        
       </div>
 
     </div>
