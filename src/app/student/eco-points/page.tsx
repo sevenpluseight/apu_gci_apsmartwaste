@@ -90,7 +90,7 @@ export default function EcoPointsPortal() {
         <div>
           <h1 className="text-3xl font-bold text-white">Eco-Points Portal</h1>
           <p className="mt-1 text-sm text-[#B2B2B2]">
-            Log your eco-friendly actions and earn sustainability badges.
+            Monitor your Smart Kiosk recycling history and manage your Eco-Points.
           </p>
         </div>
         <Button
@@ -111,13 +111,13 @@ export default function EcoPointsPortal() {
               {points.toLocaleString()}
             </p>
             <p className="mt-1 text-xs text-black/70">
-              {activitiesDone} activities completed.
+              {activitiesDone} recycling drops today.
             </p>
           </div>
           <div className="flex gap-12">
             <div className="text-center">
               <p className="text-3xl font-bold text-black">{activitiesDone}</p>
-              <p className="text-xs text-black/70">Activities Done</p>
+              <p className="text-xs text-black/70 uppercase font-semibold tracking-wider">Drops Today</p>
             </div>
           </div>
         </div>
