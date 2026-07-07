@@ -82,6 +82,36 @@
       "action": "Recycled Cardboard",
       "points": 8,
       "timestamp": "Yesterday, 11:02 AM"
+    },
+    {
+      "id": 6,
+      "action": "Recycled Electronic Waste",
+      "points": 30,
+      "timestamp": "2 days ago, 5:45 PM"
+    },
+    {
+      "id": 7,
+      "action": "Recycled Plastic Bottles",
+      "points": 10,
+      "timestamp": "2 days ago, 2:30 PM"
+    },
+    {
+      "id": 8,
+      "action": "Recycled Paper",
+      "points": 5,
+      "timestamp": "3 days ago, 10:15 AM"
+    },
+    {
+      "id": 9,
+      "action": "Recycled Aluminium Cans",
+      "points": 20,
+      "timestamp": "3 days ago, 9:00 AM"
+    },
+    {
+      "id": 10,
+      "action": "Recycled Glass Bottles",
+      "points": 15,
+      "timestamp": "4 days ago, 4:45 PM"
     }
   ],
   "reports": [
