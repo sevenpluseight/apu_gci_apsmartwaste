@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 // import { CircleCheck, Leaf, RecycleIcon, Star, Plus} from "lucide-react";
-import { CircleCheck } from "lucide-react";
+import { CircleCheck, ArrowRightLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -106,6 +106,13 @@ export default function EcoPointsPortal() {
           <Plus size={16} />
           Log Activity
         </Button> */}
+        <Button
+          onClick={() => setDialogOpen(true)}
+          className="flex items-center gap-2 rounded-xl bg-[#0BCB51] font-semibold text-black hover:bg-[#0BCB51]/90 cursor-pointer"
+        >
+          <ArrowRightLeft size={16} />
+          Convert to APCard Balance
+        </Button>
       </div>
 
       {/* Stats Banner — solid bright green matching Figma */}
