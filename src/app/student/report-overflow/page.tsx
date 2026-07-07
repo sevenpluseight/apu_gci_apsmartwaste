@@ -30,8 +30,9 @@ export default function ReportOverflowPage() {
     description: "",
   });
 
-  // Calculate reports submitted today
-  const todayStr = new Date().toISOString().split("T")[0];
+  // FIX: Reliable local timezone "YYYY-MM-DD" generation
+  const today = new Date();
+  const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
   const reportsToday = myReports.filter((report) => report.submittedAt === todayStr).length;
 
   function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -50,7 +51,7 @@ export default function ReportOverflowPage() {
       issueType: form.issueType,
       description: form.description,
       status: "Pending",
-      submittedAt: new Date().toISOString().split("T")[0],
+      submittedAt: todayStr, // FIX: Uses local date instead of UTC
     };
     setMyReports((prev) => [newReport, ...prev]);
     setSubmitted(true);
