@@ -281,7 +281,9 @@ export default function ReportOverflowPage() {
                   scrollbarColor: "#525252 #191919",
                 }}
               >
-                {myReports.map((report) => (
+                {[...myReports]
+                  .sort((a, b) => new Date(b.submittedAt).getTime() - new Date(a.submittedAt).getTime())
+                  .map((report) => (
                   <div
                     key={report.id}
                     className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 rounded-lg bg-[#111111] px-4 py-3"
