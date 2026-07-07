@@ -30,9 +30,14 @@ export default function ReportOverflowPage() {
     description: "",
   });
 
-  // FIX: Reliable local timezone "YYYY-MM-DD" generation
+  // FIX: Reliable local timezone "YYYY-MM-DD" generation for Today and Yesterday
   const today = new Date();
   const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+  
+  const yesterday = new Date(today);
+  yesterday.setDate(yesterday.getDate() - 1);
+  const yesterdayStr = `${yesterday.getFullYear()}-${String(yesterday.getMonth() + 1).padStart(2, '0')}-${String(yesterday.getDate()).padStart(2, '0')}`;
+
   const reportsToday = myReports.filter((report) => report.submittedAt === todayStr).length;
 
   function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -269,7 +274,13 @@ export default function ReportOverflowPage() {
             {myReports.length === 0 ? (
               <p className="text-sm text-[#B2B2B2]">No reports submitted yet.</p>
             ) : (
-              <div className="space-y-3">
+              <div 
+                className="space-y-3 max-h-75 overflow-y-auto pr-2"
+                style={{
+                  scrollbarWidth: "thin",
+                  scrollbarColor: "#525252 #191919",
+                }}
+              >
                 {myReports.map((report) => (
                   <div
                     key={report.id}
@@ -282,7 +293,13 @@ export default function ReportOverflowPage() {
                           {report.building} — {report.floor}
                         </p>
                         <p className="text-xs text-[#B2B2B2]">{report.issueType}</p>
-                        <p className="mt-0.5 text-xs text-[#525252]">{report.submittedAt}</p>
+                        <p className="mt-0.5 text-xs text-[#525252] font-semibold">
+                          {report.submittedAt === todayStr 
+                            ? "Today" 
+                            : report.submittedAt === yesterdayStr 
+                              ? "Yesterday" 
+                              : report.submittedAt}
+                        </p>
                       </div>
                     </div>
                     <span
