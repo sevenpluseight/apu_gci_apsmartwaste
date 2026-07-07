@@ -4,14 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { ArrowLeft, Home, TriangleAlert, Coins, BookOpen } from "lucide-react";
+// import { ArrowLeft, Home, TriangleAlert, Coins, BookOpen } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { ArrowLeft, Home, TriangleAlert, Coins } from "lucide-react";
 
 const navItems = [
   { label: "Home", icon: Home, href: "/student" },
   { label: "Report", icon: TriangleAlert, href: "/student/report-overflow" },
   { label: "Eco-Points", icon: Coins, href: "/student/eco-points" },
-  { label: "Guide", icon: BookOpen, href: "/student/recycling-guide" },
+  // { label: "Guide", icon: BookOpen, href: "/student/recycling-guide" },
   // { label: "Profile", icon: UserCircle, href: "/student/profile" },
 ];
 
