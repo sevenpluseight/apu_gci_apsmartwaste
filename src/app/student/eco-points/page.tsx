@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { CircleCheck, Leaf, RecycleIcon, Star, Plus } from "lucide-react";
+// import { CircleCheck, Leaf, RecycleIcon, Star, Plus} from "lucide-react";
+import { CircleCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -20,25 +21,26 @@ import { Input } from "@/components/ui/input";
 import studentData from "@/mock/student/student.json";
 
 // Badge icon and color config matching Figma
-const badgeConfig: Record<string, { icon: React.ReactNode; bg: string }> = {
-  "Green Beginner": {
-    icon: <Leaf size={20} className="text-[#0BCB51]" />,
-    bg: "bg-[#0BCB51]/20",
-  },
-  "Recycling Support": {
-    icon: <RecycleIcon size={20} className="text-[#2983FF]" />,
-    bg: "bg-[#2983FF]/20",
-  },
-  "Eco Hero": {
-    icon: <Star size={20} className="text-red-400" />,
-    bg: "bg-red-400/20",
-  },
-};
+// const badgeConfig: Record<string, { icon: React.ReactNode; bg: string }> = {
+//   "Green Beginner": {
+//     icon: <Leaf size={20} className="text-[#0BCB51]" />,
+//     bg: "bg-[#0BCB51]/20",
+//   },
+//   "Recycling Support": {
+//     icon: <RecycleIcon size={20} className="text-[#2983FF]" />,
+//     bg: "bg-[#2983FF]/20",
+//   },
+//   "Eco Hero": {
+//     icon: <Star size={20} className="text-red-400" />,
+//     bg: "bg-red-400/20",
+//   },
+// };
 
 export default function EcoPointsPortal() {
-  const { profile, badges, activityLogs, recyclingItems } = studentData;
+  // const { profile, badges, activityLogs, recyclingItems } = studentData;
+  const { profile, activityLogs, recyclingItems } = studentData;
 
-  const earnedBadges = badges.filter((b) => b.earned);
+  // const earnedBadges = badges.filter((b) => b.earned);
 
   const [points, setPoints] = useState(profile.ecoPoints);
   const [logs, setLogs] = useState(activityLogs);
@@ -97,13 +99,13 @@ export default function EcoPointsPortal() {
             Log your eco-friendly actions and earn sustainability badges.
           </p>
         </div>
-        <Button
+        {/* <Button
           onClick={() => setDialogOpen(true)}
           className="flex items-center gap-2 rounded-xl bg-[#0BCB51] font-semibold text-black hover:bg-[#0BCB51]/90 cursor-pointer"
         >
           <Plus size={16} />
           Log Activity
-        </Button>
+        </Button> */}
       </div>
 
       {/* Stats Banner — solid bright green matching Figma */}
@@ -119,23 +121,23 @@ export default function EcoPointsPortal() {
             </p>
           </div>
           <div className="flex gap-12">
-            <div className="text-center">
+            {/* <div className="text-center">
               <p className="text-3xl font-bold text-black">{earnedBadges.length}</p>
               <p className="text-xs text-black/70">Badges Earned</p>
-            </div>
+            </div> */}
             <div className="text-center">
               <p className="text-3xl font-bold text-black">{activitiesDone}</p>
               <p className="text-xs text-black/70">Activities Done</p>
             </div>
-            <div className="text-center">
+            {/* <div className="text-center">
               <p className="text-3xl font-bold text-black">{profile.weekStreak}</p>
               <p className="text-xs text-black/70">Week Streak</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
-      {/* Badges — only earned, with colored icon squares */}
+      {/* Badges — only earned, with colored icon squares
       <div className="mb-5">
         <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-white">
           <CircleCheck size={16} className="text-[#0BCB51]" />
@@ -165,7 +167,7 @@ export default function EcoPointsPortal() {
             );
           })}
         </div>
-      </div>
+      </div> */}
 
       {/* Activity Logs */}
       <div className="rounded-xl bg-[#191919] border border-[#525252] px-4 py-4">
