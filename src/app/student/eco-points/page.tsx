@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CircleCheck, ArrowRightLeft } from "lucide-react";
+import { CircleCheck, ArrowRightLeft, Coins } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -113,9 +113,10 @@ export default function EcoPointsPortal() {
         <div className="flex items-center justify-between">
           <div>
             <p className="mb-1 text-sm font-medium text-black/70">Your Eco Points</p>
-            <p className="text-5xl font-bold text-black">
-              {points.toLocaleString()}
-            </p>
+            <div className="flex items-center gap-3 text-5xl font-bold text-black">
+              <Coins size={40} strokeWidth={2.5} />
+              <span>{points.toLocaleString()}</span>
+            </div>
             <p className="mt-1 text-xs text-black/70">
               {dropsTodayCount} recycling drops today.
             </p>
@@ -153,7 +154,8 @@ export default function EcoPointsPortal() {
                   <span className="text-sm text-white">{log.action}</span>
                 </div>
                 <div className="flex items-center gap-4 text-sm">
-                  <span className={`font-semibold ${isDeduction ? "text-red-400" : "text-[#0BCB51]"}`}>
+                  <span className={`flex items-center gap-1.5 font-semibold ${isDeduction ? "text-red-400" : "text-[#0BCB51]"}`}>
+                    <Coins size={14} />
                     {isDeduction ? "" : "+"}{log.points} Eco Points
                   </span>
                   <span className="text-[#B2B2B2]">•</span>
