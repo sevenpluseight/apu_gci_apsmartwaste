@@ -64,14 +64,14 @@ export default function StudentPage() {
             <span className="text-xs font-semibold uppercase tracking-widest text-[#166534]">Eco Equivalent</span>
           </div>
           
-          {/* Flex container with justify-between to push the progress bar to the right */}
-          <div className="flex items-center justify-between w-full">
-            <p className="text-3xl font-bold text-[#0BCB51]">
+          {/* Flex container with justify-between and gap to prevent overlapping */}
+          <div className="flex items-center justify-between w-full gap-4">
+            <p className="text-3xl font-bold text-[#0BCB51] whitespace-nowrap">
               1 <span className="text-base font-normal text-[#166534]/70">Tree Saved 🌳</span>
             </p>
             
-            {/* Compact Inline Progress Bar anchored to the right */}
-            <div className="flex flex-col w-24 mt-1">
+            {/* Longer Inline Progress Bar anchored to the right */}
+            <div className="flex flex-col w-32 sm:w-50 mt-1">
               <div className="flex justify-between text-[9px] font-bold text-[#166534] mb-1 uppercase tracking-wide">
                 <span>Next</span>
                 <span>24%</span>
