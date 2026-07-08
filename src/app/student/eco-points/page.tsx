@@ -62,8 +62,7 @@ export default function EcoPointsPortal() {
 
       // Update Points and Logs
       setPoints((prev) => prev - convertAmount);
-      // setActivitiesDone((prev) => prev + 1);
-      setPoints((prev) => prev - convertAmount);
+      
       setLogs((prev) => [
         {
           id: prev.length + 1,

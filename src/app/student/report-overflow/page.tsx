@@ -79,11 +79,11 @@ export default function ReportOverflowPage() {
       <div className="mb-6">
         <h1 className="text-3xl font-bold text-white">Report Overflowing Bin</h1>
         <p className="mt-1 text-sm text-[#B2B2B2]">
-          Help keep APU campus clean. Reports are reviewed within 3 hours.
+          Help keep APU campus clean.
         </p>
       </div>
 
-      {/* MOVED SUCCESS MESSAGE (Outside the form, acts as a page alert) */}
+      {/* Main Alert */}
       {submitted && (
         <div className="mb-6 flex items-center gap-3 rounded-xl bg-[#0BCB51]/15 border border-[#0BCB51]/30 px-5 py-4 text-sm font-medium text-[#0BCB51] animate-in fade-in slide-in-from-top-2 duration-300">
           <CircleCheck size={18} className="shrink-0" />
