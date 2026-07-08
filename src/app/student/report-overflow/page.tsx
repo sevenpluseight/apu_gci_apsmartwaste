@@ -219,13 +219,6 @@ export default function ReportOverflowPage() {
 
           </div>
 
-          {submitted && (
-            <div className="mt-5 flex items-center gap-2 rounded-lg bg-[#0BCB51]/15 border border-[#0BCB51]/30 px-4 py-3 text-sm text-[#0BCB51]">
-              <CircleCheck size={16} className="shrink-0" />
-              Report submitted successfully! Our team will review it within 3 hours.
-            </div>
-          )}
-
           <div className="mt-6 flex justify-end">
             <Button
               type="submit"

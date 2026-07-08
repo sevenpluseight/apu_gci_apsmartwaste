@@ -82,7 +82,6 @@ export default function RoleSelection() {
                   ))}
                 </div>
 
-                {/* Do not fix the button CSS warning (The class `bg-[length:200%_100%]` can be written as `bg-size-[200%_100%]`) */}
                 <Link href={role.href} className="mt-auto">
                   <Button className="group w-full h-13 rounded-xl border border-[#0BCB51]/60 bg-[linear-gradient(110deg,#0BCB51,45%,#4ADE80,55%,#0BCB51)] bg-size-[200%_100%] animate-shimmer text-base font-semibold text-black shadow-[0_0_24px_rgba(11,203,81,0.35)] transition-all duration-300 hover:scale-[1.03] hover:bg-[linear-gradient(110deg,#0BCB51,45%,#4ADE80,55%,#0BCB51)] hover:shadow-[0_0_32px_rgba(11,203,81,0.55)] cursor-pointer">
                     {role.button}
