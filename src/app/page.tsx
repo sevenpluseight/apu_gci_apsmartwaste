@@ -10,7 +10,7 @@ export default function Home() {
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
       <div className="pointer-events-none absolute inset-0 z-0 opacity-80">
         <div
-          className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.12)_1.2px,transparent_1.2px)] bg-[length:28px_28px]"
+          className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.12)_1.2px,transparent_1.2px)] bg-size-[28px_28px]"
         />
       </div>
 

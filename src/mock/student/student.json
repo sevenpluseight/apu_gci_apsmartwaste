@@ -82,6 +82,36 @@
       "action": "Recycled Cardboard",
       "points": 8,
       "timestamp": "Yesterday, 11:02 AM"
+    },
+    {
+      "id": 6,
+      "action": "Recycled Electronic Waste",
+      "points": 30,
+      "timestamp": "2 days ago, 5:45 PM"
+    },
+    {
+      "id": 7,
+      "action": "Recycled Plastic Bottles",
+      "points": 10,
+      "timestamp": "2 days ago, 2:30 PM"
+    },
+    {
+      "id": 8,
+      "action": "Recycled Paper",
+      "points": 5,
+      "timestamp": "3 days ago, 10:15 AM"
+    },
+    {
+      "id": 9,
+      "action": "Recycled Aluminium Cans",
+      "points": 20,
+      "timestamp": "3 days ago, 9:00 AM"
+    },
+    {
+      "id": 10,
+      "action": "Recycled Glass Bottles",
+      "points": 15,
+      "timestamp": "4 days ago, 4:45 PM"
     }
   ],
   "reports": [
@@ -106,6 +136,50 @@
       "description": "Recycling bin full since morning.",
       "status": "In Progress",
       "submittedAt": "2026-07-01"
+    },
+    {
+      "id": "RPT-003",
+      "building": "Library",
+      "floor": "Level 1",
+      "binLocation": "Near Study Area B",
+      "wasteCategory": "Food Waste",
+      "issueType": "Damaged Bin",
+      "description": "Food waste bin lid is broken.",
+      "status": "Pending",
+      "submittedAt": "2026-07-02"
+    },
+    {
+      "id": "RPT-004",
+      "building": "Block C",
+      "floor": "Level 3",
+      "binLocation": "Near Computer Lab C301",
+      "wasteCategory": "Hazardous",
+      "issueType": "Missing Bin",
+      "description": "Hazardous waste bin is missing from the lab.",
+      "status": "Resolved",
+      "submittedAt": "2026-07-03"
+    },
+    {
+      "id": "RPT-005",
+      "building": "Sports Complex",
+      "floor": "Ground Floor",
+      "binLocation": "Near Gym Entrance",
+      "wasteCategory": "General Waste",
+      "issueType": "Bad Odour",
+      "description": "Bin emitting bad odour, needs immediate attention.",
+      "status": "In Progress",
+      "submittedAt": "2026-07-08"
+    },
+    {
+      "id": "RPT-006",
+      "building": "Student Hub",
+      "floor": "Level 1",
+      "binLocation": "Near Lounge Area",
+      "wasteCategory": "Recycling",
+      "issueType": "Overflowing",
+      "description": "Recycling bin is overflowing, please empty.",
+      "status": "Pending",
+      "submittedAt": "2026-07-05"
     }
   ],
   "recyclingItems": [
