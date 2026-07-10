@@ -1,21 +1,15 @@
 "use client";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { Info, ChevronUp } from "lucide-react";
+import { CheckCircle2, ChevronUp, Info } from "lucide-react";
 
-export default function CardReader() {
-  const router = useRouter();
+interface CardReaderProps {
+  isCardDetected?: boolean;
+}
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push("/kiosk/student/verifying");
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, [router]);
-
+export default function CardReader({
+  isCardDetected = false,
+}: CardReaderProps) {
   return (
     <div className="mt-8 flex flex-col items-center">
       <div className="relative flex h-75 w-107.5 items-center justify-center rounded-3xl border-2 border-dashed border-[#0BCB51]/45 bg-[#111111]/80 shadow-[0_0_40px_rgba(11,203,81,0.12)]">
@@ -49,16 +43,20 @@ export default function CardReader() {
 
         <motion.div
           className="absolute top-24"
-          animate={{ y: [0, 26, 0] }}
-          transition={{
-            duration: 2.2,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+          animate={isCardDetected ? { y: 26 } : { y: [0, 26, 0] }}
+          transition={
+            isCardDetected
+              ? { duration: 0.4 }
+              : {
+                  duration: 2.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }
+          }
         >
           <div className="relative h-42 w-70 overflow-hidden rounded-2xl border border-[#7BFFAA]/70 bg-linear-to-br from-[#0BCB51] via-[#08B648] to-[#056B2C] p-4 shadow-[0_0_30px_rgba(11,203,81,0.45)]">
             <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-white/10" />
-            <div className="absolute -left-8 -bottom-8 h-24 w-24 rounded-full bg-black/10" />
+            <div className="absolute -bottom-8 -left-8 h-24 w-24 rounded-full bg-black/10" />
 
             <div className="flex items-start justify-between gap-4">
               <div>
@@ -90,44 +88,40 @@ export default function CardReader() {
 
             <div className="space-y-1 text-left">
               <p className="text-base font-semibold text-white">
-                Alex Tan
+                Name
               </p>
 
               <p className="text-xs tracking-wide text-white/90">
-                TP071999
+                IC/Passport Number
               </p>
 
               <p className="text-xs text-white/75">
-                IC/Passport: A12345678
+                TP Number
               </p>
             </div>
 
-            <div className="absolute bottom-2.5 right-4 text-right">
+            <div className="absolute right-4 bottom-2.5">
               <p className="text-2xl font-bold tracking-wider text-white/90">
                 APU
               </p>
             </div>
           </div>
         </motion.div>
+
+        {isCardDetected && (
+          <div className="absolute right-5 bottom-5 flex items-center gap-2 rounded-full bg-[#0BCB51]/15 px-4 py-2 text-sm font-medium text-[#0BCB51]">
+            <CheckCircle2 size={18} />
+            Card detected
+          </div>
+        )}
       </div>
 
       <div className="mt-5 flex items-center gap-3 rounded-full border border-[#2A2A2A] bg-[#111111] px-6 py-3 text-sm text-[#B2B2B2]">
-        <Info size={18} className="text-[#0BCB51]" />
+        <Info size={18} className="shrink-0 text-[#0BCB51]" />
 
         <span>
-          Insert your APCard into the card reader.
+          Insert your APCard into the card reader and wait for the system to detect it. This may take a few seconds.
         </span>
-
-        {/* <Link href="/kiosk/student/verifying">
-          <Button className="group h-11 cursor-pointer rounded-xl bg-[#0BCB51] px-8 font-semibold text-black transition-all duration-300 hover:bg-[#09B849] hover:shadow-[0_0_20px_rgba(11,203,81,0.3)]">
-            Next
-
-            <ArrowRight
-              size={18}
-              className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </Button>
-        </Link> */}
       </div>
     </div>
   );
