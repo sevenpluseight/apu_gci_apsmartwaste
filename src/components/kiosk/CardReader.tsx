@@ -3,9 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { Info, ChevronUp, ArrowRight } from "lucide-react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Info, ChevronUp } from "lucide-react";
 
 export default function CardReader() {
   const router = useRouter();
