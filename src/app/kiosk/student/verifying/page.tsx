@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import KioskLayout from "@/components/kiosk/KioskLayout";
-import KioskVerifyingScreen from "@/components/kiosk/KioskVerifyingScreen";
 import { CreditCard, Recycle, UserRound } from "lucide-react";
+import KioskLayout from "@/components/kiosk/KioskLayout";
+import StudentVerifyingScreen from "@/components/kiosk/StudentVerifyingScreen";
 
 const steps = [
   {
@@ -29,24 +29,28 @@ export default function StudentVerifyingPage() {
   const [currentStep, setCurrentStep] = useState(0);
 
   useEffect(() => {
-    const stepOne = setTimeout(() => setCurrentStep(1), 2000);
-    const stepTwo = setTimeout(() => setCurrentStep(2), 4000);
-    const nextPage = setTimeout(() => {
+    const stepOneTimer = setTimeout(() => {
+      setCurrentStep(1);
+    }, 2000);
+
+    const stepTwoTimer = setTimeout(() => {
+      setCurrentStep(2);
+    }, 4000);
+
+    const navigationTimer = setTimeout(() => {
       router.push("/kiosk/student/deposit");
     }, 6000);
 
     return () => {
-      clearTimeout(stepOne);
-      clearTimeout(stepTwo);
-      clearTimeout(nextPage);
+      clearTimeout(stepOneTimer);
+      clearTimeout(stepTwoTimer);
+      clearTimeout(navigationTimer);
     };
   }, [router]);
 
   return (
     <KioskLayout>
-      <KioskVerifyingScreen
-        title="Preparing Your Recycling Session"
-        subtitle="Please wait while the kiosk verifies your APCard."
+      <StudentVerifyingScreen
         steps={steps}
         currentStep={currentStep}
       />
