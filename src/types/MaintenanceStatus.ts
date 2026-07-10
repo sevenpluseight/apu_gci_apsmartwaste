@@ -1,0 +1,1 @@
+export type MaintenanceStatus = "locked" | "unlocking" | "opened" | "locking";
