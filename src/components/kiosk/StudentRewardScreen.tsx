@@ -35,7 +35,7 @@ const recycledItems = [
   },
 ];
 
-export default function KioskRewardScreen() {
+export default function StudentRewardScreen() {
   const router = useRouter();
   const [countdown, setCountdown] = useState(8);
 

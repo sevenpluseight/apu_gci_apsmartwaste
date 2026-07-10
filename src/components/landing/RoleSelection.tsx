@@ -16,19 +16,19 @@ const roles = [
     ],
     button: "Explore Student",
   },
-  {
-    title: "Facility",
-    icon: Building2,
-    href: "/facility",
-    description:
-      "Monitor campus waste conditions and manage waste reports through a centralized dashboard.",
-    features: [
-      "Smart Waste Dashboard",
-      "Manage Overflow Reports",
-      "Real-Time Bin Status",
-    ],
-    button: "Explore Dashboard",
-  },
+  // {
+  //   title: "Facility",
+  //   icon: Building2,
+  //   href: "/facility",
+  //   description:
+  //     "Monitor campus waste conditions and manage waste reports through a centralized dashboard.",
+  //   features: [
+  //     "Smart Waste Dashboard",
+  //     "Manage Overflow Reports",
+  //     "Real-Time Bin Status",
+  //   ],
+  //   button: "Explore Dashboard",
+  // },
   {
     title: "Janitor",
     icon: BrushCleaning,
@@ -54,10 +54,10 @@ export default function RoleSelection() {
         </div>
 
         <p className="mb-8 text-lg font-medium text-white">
-          Experience SmartWaste from the perspective of students, facility management or janitors.
+          Experience SmartWaste from the perspective of students or janitors.
         </p>
         
-        <div className="grid gap-7 md:grid-cols-3">
+        <div className="mx-auto grid max-w-4xl gap-7 md:grid-cols-2">
           {roles.map((role) => {
             const Icon = role.icon;
 
@@ -71,7 +71,7 @@ export default function RoleSelection() {
                   {role.title}
                 </div>
 
-                <p className="mb-8 text-center text-base leading-7 text-[#B2B2B2]">{role.description}</p>
+                <p className="mb-8 h-20 text-center text-base leading-7 text-[#B2B2B2]">{role.description}</p>
 
                 <div className="mt-4 mb-10 space-y-3">
                   {role.features.map((feature) => (

@@ -33,7 +33,7 @@ interface KioskValidationScreenProps {
   isDone: boolean;
 }
 
-export default function KioskValidationScreen({
+export default function StudentValidationItemScreen({
   isDone,
 }: KioskValidationScreenProps) {
   return (
