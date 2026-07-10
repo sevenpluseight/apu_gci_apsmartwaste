@@ -1,6 +1,6 @@
 import Link from "next/link";
 import KioskLayout from "@/components/kiosk/KioskLayout";
-import KioskDepositTray from "@/components/kiosk/KioskDepositTray";
+import StudentDepositTray from "@/components/kiosk/StudentDepositTray";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Info } from "lucide-react";
 
@@ -40,7 +40,7 @@ export default function DepositPage() {
           </Link>
         </div>
 
-        <KioskDepositTray />
+        <StudentDepositTray />
       </div>
     </KioskLayout>
   );

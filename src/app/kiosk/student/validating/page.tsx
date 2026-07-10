@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import KioskLayout from "@/components/kiosk/KioskLayout";
-import KioskValidationScreen from "@/components/kiosk/KioskValidationScreen";
+import StudentValidationItemScreen from "@/components/kiosk/StudentValidationItemScreen.tsx";
 
 export default function ValidatingPage() {
   const [isDone, setIsDone] = useState(false);
@@ -14,7 +14,7 @@ export default function ValidatingPage() {
 
   return (
     <KioskLayout>
-      <KioskValidationScreen isDone={isDone} />
+      <StudentValidationItemScreen isDone={isDone} />
     </KioskLayout>
   );
 }
