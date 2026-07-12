@@ -3,18 +3,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, LayoutDashboard, Clock3, Package, CheckCircle2 } from "lucide-react";
-import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
+// import { motion } from "framer-motion";
+// import { usePathname } from "next/navigation";
 
-const navItems = [
-  { label: "Overview", icon: LayoutDashboard, href: "/janitor" },
-  { label: "Upcoming", icon: Package, href: "/janitor/upcoming" },
-  { label: "In Progress", icon: Clock3, href: "/janitor/in-progress" },
-  { label: "Completed", icon: CheckCircle2, href: "/janitor/completed" },
-];
+// const navItems = [
+//   { label: "Overview", icon: LayoutDashboard, href: "/janitor" },
+//   { label: "Upcoming", icon: Package, href: "/janitor/upcoming" },
+//   { label: "In Progress", icon: Clock3, href: "/janitor/in-progress" },
+//   { label: "Completed", icon: CheckCircle2, href: "/janitor/completed" },
+// ];
 
 export default function JanitorNavBar() {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   return (
     <header className="w-full border-b border-[#2A2A2A] bg-[#191919]">
@@ -38,7 +38,7 @@ export default function JanitorNavBar() {
           />
         </div>
 
-        <nav className="flex h-16 items-center gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide lg:h-full lg:gap-8 lg:overflow-visible">
+        {/* <nav className="flex h-16 items-center gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide lg:h-full lg:gap-8 lg:overflow-visible">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.href;
@@ -68,7 +68,7 @@ export default function JanitorNavBar() {
               </Link>
             );
           })}
-        </nav>
+        </nav> */}
       </div>
     </header>
   );
