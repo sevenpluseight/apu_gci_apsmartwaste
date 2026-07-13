@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
@@ -28,7 +29,7 @@ export default function HeroSection() {
           practices.
         </p>
 
-        <div className="mt-16 flex items-center gap-6">
+        <div className="mt-16 flex flex-wrap items-center justify-center gap-6">
           {/* Do not fix the Explore Now button CSS warning (The class `bg-[length:200%_100%]` can be written as `bg-size-[200%_100%]`) */}
           {/* Explore Now */}
           <Button
@@ -40,12 +41,26 @@ export default function HeroSection() {
 
           {/* View Campaign */}
           <Button
-            onClick={() => document.getElementById("campaign")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() =>
+              document
+                .getElementById("campaign")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
             variant="outline"
             className="h-12 w-44 rounded-xl border-[#525252] bg-transparent text-[#B2B2B2] hover:border-[#0BCB51] hover:bg-transparent hover:text-white cursor-pointer"
           >
             View Campaign
           </Button>
+
+          {/* Temporary Kiosk UI Button - To be changed */}
+          <Link href="/kiosk">
+            <Button
+              variant="outline"
+              className="h-12 w-44 rounded-xl border-[#525252] bg-transparent text-[#B2B2B2] hover:border-[#0BCB51] hover:bg-transparent hover:text-white cursor-pointer"
+            >
+              Kiosk UI
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,0 +1,92 @@
+{
+  "date": "Friday, 10 July 2026",
+  "janitor": {
+    "id": "JN-003",
+    "name": "Ahmad"
+  },
+  "shift": {
+    "workingHours": "8:00 AM - 5:00 PM",
+    "assignedArea": "Blocks A, B and C"
+  },
+  "kiosks": [
+    {
+      "id": "PL-001",
+      "name": "Plastic Kiosk",
+      "type": "Plastic",
+      "location": "Cafeteria • Level 3",
+      "fillLevel": 95,
+      "status": "full",
+      "lastUpdated": "2 minutes ago",
+      "href": "/janitor/kiosks/PL-001"
+    },
+    {
+      "id": "PA-001",
+      "name": "Paper Kiosk",
+      "type": "Paper",
+      "location": "Cafeteria • Level 3",
+      "fillLevel": 58,
+      "status": "half-full",
+      "lastUpdated": "5 minutes ago",
+      "href": "/janitor/kiosks/PA-001"
+    },
+    {
+      "id": "MT-001",
+      "name": "Metal Kiosk",
+      "type": "Metal",
+      "location": "Cafeteria • Level 3",
+      "fillLevel": 24,
+      "status": "good",
+      "lastUpdated": "4 minutes ago",
+      "href": "/janitor/kiosks/MT-001"
+    }
+  ],
+  "overflowReports": [
+    {
+      "id": "REP-001",
+      "title": "Overflowing General Waste Bin",
+      "location": "Block B Cafeteria",
+      "reportedAt": "8 minutes ago",
+      "priority": "High",
+      "status": "Assigned",
+      "href": "/janitor/reports/REP-001"
+    },
+    {
+      "id": "REP-002",
+      "title": "Recycling Bin Nearly Overflowing",
+      "location": "Block A Lobby",
+      "reportedAt": "22 minutes ago",
+      "priority": "Medium",
+      "status": "In Progress",
+      "href": "/janitor/reports/REP-002"
+    }
+  ],
+  "maintenanceForecast": [
+    {
+      "id": "PL-001",
+      "kiosk": "Plastic Kiosk",
+      "location": "Block A • Ground Floor",
+      "fillLevel": 95,
+      "message": "Waste bag replacement is required immediately.",
+      "estimatedTime": "Due now",
+      "status": "urgent"
+    },
+    {
+      "id": "PA-001",
+      "kiosk": "Paper Kiosk",
+      "location": "Block B • Level 2",
+      "fillLevel": 58,
+      "message": "The kiosk is expected to require a bag replacement soon.",
+      "estimatedTime": "Estimated within 2 days",
+      "status": "upcoming"
+    },
+    {
+      "id": "MT-001",
+      "kiosk": "Metal Kiosk",
+      "location": "Block C • Ground Floor",
+      "fillLevel": 24,
+      "message": "No bag replacement is currently required.",
+      "estimatedTime": "Estimated in 5 days",
+      "status": "normal"
+    }
+  ]
+}

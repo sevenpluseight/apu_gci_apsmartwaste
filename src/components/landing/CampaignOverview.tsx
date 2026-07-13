@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const stats = [
   {
-    value: "12",
+    value: "15",
     title: "Planned Posts",
     subtitle: "Educational waste management content",
   },

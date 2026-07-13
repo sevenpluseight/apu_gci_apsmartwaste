@@ -11,24 +11,24 @@ const roles = [
       "Report waste issues and participate in sustainable recycling initiatives across the campus.",
     features: [
       "Report Overflowing Bins",
-      "View Eco-Points",
-      "Track Participation & Badges",
+      "View & Redeem Eco-Points",
+      "Track Recycling Activity",
     ],
     button: "Explore Student",
   },
-  {
-    title: "Facility",
-    icon: Building2,
-    href: "/facility",
-    description:
-      "Monitor campus waste conditions and manage waste reports through a centralized dashboard.",
-    features: [
-      "Smart Waste Dashboard",
-      "Manage Overflow Reports",
-      "Real-Time Bin Status",
-    ],
-    button: "Explore Dashboard",
-  },
+  // {
+  //   title: "Facility",
+  //   icon: Building2,
+  //   href: "/facility",
+  //   description:
+  //     "Monitor campus waste conditions and manage waste reports through a centralized dashboard.",
+  //   features: [
+  //     "Smart Waste Dashboard",
+  //     "Manage Overflow Reports",
+  //     "Real-Time Bin Status",
+  //   ],
+  //   button: "Explore Dashboard",
+  // },
   {
     title: "Janitor",
     icon: BrushCleaning,
@@ -54,10 +54,10 @@ export default function RoleSelection() {
         </div>
 
         <p className="mb-8 text-lg font-medium text-white">
-          Experience SmartWaste from the perspective of students, facility management or janitors.
+          Experience SmartWaste from the perspective of students or janitors.
         </p>
         
-        <div className="grid gap-7 md:grid-cols-3">
+        <div className="mx-auto grid max-w-4xl gap-7 md:grid-cols-2">
           {roles.map((role) => {
             const Icon = role.icon;
 
@@ -71,7 +71,7 @@ export default function RoleSelection() {
                   {role.title}
                 </div>
 
-                <p className="mb-8 text-center text-base leading-7 text-[#B2B2B2]">{role.description}</p>
+                <p className="mb-8 h-20 text-center text-base leading-7 text-[#B2B2B2]">{role.description}</p>
 
                 <div className="mt-4 mb-10 space-y-3">
                   {role.features.map((feature) => (
@@ -82,9 +82,8 @@ export default function RoleSelection() {
                   ))}
                 </div>
 
-                {/* Do not fix the button CSS warning (The class `bg-[length:200%_100%]` can be written as `bg-size-[200%_100%]`) */}
                 <Link href={role.href} className="mt-auto">
-                  <Button className="group w-full h-13 rounded-xl border border-[#0BCB51]/60 bg-[linear-gradient(110deg,#0BCB51,45%,#4ADE80,55%,#0BCB51)] bg-[length:200%_100%] animate-shimmer text-base font-semibold text-black shadow-[0_0_24px_rgba(11,203,81,0.35)] transition-all duration-300 hover:scale-[1.03] hover:bg-[linear-gradient(110deg,#0BCB51,45%,#4ADE80,55%,#0BCB51)] hover:shadow-[0_0_32px_rgba(11,203,81,0.55)] cursor-pointer">
+                  <Button className="group w-full h-13 rounded-xl border border-[#0BCB51]/60 bg-[linear-gradient(110deg,#0BCB51,45%,#4ADE80,55%,#0BCB51)] bg-size-[200%_100%] animate-shimmer text-base font-semibold text-black shadow-[0_0_24px_rgba(11,203,81,0.35)] transition-all duration-300 hover:scale-[1.03] hover:bg-[linear-gradient(110deg,#0BCB51,45%,#4ADE80,55%,#0BCB51)] hover:shadow-[0_0_32px_rgba(11,203,81,0.55)] cursor-pointer">
                     {role.button}
                     <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "RPT-1228",
+    "building": "Block A",
+    "floor": "Level 3",
+    "location": "Outside Block A",
+    "issue": "Plastic Bin Overflow",
+    "category": "Plastic",
+    "completedTime": "9:40 AM",
+    "duration": "18 mins",
+    "bins": 2
+  },
+  {
+    "id": "RPT-1230",
+    "building": "Library",
+    "floor": "Level 4",
+    "location": "Study Area",
+    "issue": "Paper Bin Overflow",
+    "category": "Paper",
+    "completedTime": "10:05 AM",
+    "duration": "15 mins",
+    "bins": 1
+  }
+]
