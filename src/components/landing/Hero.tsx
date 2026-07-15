@@ -53,14 +53,14 @@ export default function HeroSection() {
           </Button>
 
           {/* Temporary Kiosk UI Button - To be changed */}
-          <Link href="/kiosk">
+          {/* <Link href="/kiosk">
             <Button
               variant="outline"
               className="h-12 w-44 rounded-xl border-[#525252] bg-transparent text-[#B2B2B2] hover:border-[#0BCB51] hover:bg-transparent hover:text-white cursor-pointer"
             >
               Kiosk UI
             </Button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>
