@@ -72,7 +72,7 @@ export default function KioskStatusOverview({
   kiosks,
 }: Props) {
   return (
-    <section>
+    <section className="overflow-hidden">
       <div className="flex items-end justify-between">
         <div>
           <h2 className="text-2xl font-semibold text-white">
@@ -85,7 +85,7 @@ export default function KioskStatusOverview({
         </div>
       </div>
 
-      <div className="mt-6 grid gap-6 lg:grid-cols-3">
+      <div className="mt-6 grid gap-4 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
         {kiosks.map((kiosk) => {
           const config = kioskConfig[kiosk.type];
           const status = statusConfig[kiosk.status];
@@ -95,7 +95,7 @@ export default function KioskStatusOverview({
           return (
             <div
               key={kiosk.id}
-              className={`group rounded-2xl border ${config.border} bg-[#191919] p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(11,203,81,0.12)]`}
+              className={`group min-w-0 rounded-2xl border ${config.border} bg-[#191919] p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(11,203,81,0.12)]`}
             >
               {/* Header */}
               <div className="flex items-start justify-between">
@@ -131,7 +131,7 @@ export default function KioskStatusOverview({
               </p>
 
               {/* Fill Level */}
-              <div className="mt-6 flex items-end justify-between">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                 <div>
                   <p className="text-xs text-[#8A8A8A]">
                     Fill Level
@@ -144,7 +144,7 @@ export default function KioskStatusOverview({
                   </p>
                 </div>
 
-                <div className="text-right">
+                <div className="text-left sm:text-right">
                   <div className="flex items-center justify-end gap-1 text-[#8A8A8A]">
                     <Clock3 size={13} />
 
