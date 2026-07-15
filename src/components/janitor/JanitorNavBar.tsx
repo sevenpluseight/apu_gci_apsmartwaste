@@ -18,8 +18,8 @@ export default function JanitorNavBar() {
 
   return (
     <header className="w-full border-b border-[#2A2A2A] bg-[#191919]">
-      <div className="mx-auto flex min-h-20 max-w-360 flex-col gap-3 px-5 py-3 lg:h-20 lg:flex-row lg:items-center lg:justify-between lg:px-10 lg:py-0">
-        <div className="flex items-center justify-between lg:justify-start lg:gap-10">
+      <div className="mx-auto flex min-h-20 max-w-screen-2xl flex-col gap-3 px-6 py-3 lg:h-20 lg:flex-row lg:items-center lg:justify-between lg:px-12 lg:py-0">
+        <div className="flex w-full items-center justify-between h-12 lg:static lg:h-auto lg:justify-start lg:gap-10">
           <Link
             href="/"
             className="flex items-center gap-1.5 text-sm text-[#B2B2B2] transition-colors hover:text-white"
@@ -34,7 +34,7 @@ export default function JanitorNavBar() {
             height={40}
             alt="APSmartWaste"
             priority
-            className="ml-4 lg:ml-0 lg:w-45"
+            className="w-40 lg:w-45"
           />
         </div>
 
