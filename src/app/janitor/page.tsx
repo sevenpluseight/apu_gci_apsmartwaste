@@ -12,7 +12,7 @@ const overview = overviewData as JanitorOverview;
 
 export default function JanitorOverviewPage() {
   return (
-    <main className="mx-auto max-w-360 px-10 py-6 text-white">
+    <main className="mx-auto w-full max-w-6xl overflow-x-hidden px-4 py-6 text-white sm:px-6 lg:px-8 xl:px-10">
       <JanitorHeader
         date={overview.date}
         janitorName={overview.janitor.name}

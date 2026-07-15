@@ -16,10 +16,10 @@ export default function JanitorHeader({
   return (
     <section className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
       {/* Left */}
-      <div>
+      <div className="min-w-0">
         <p className="text-sm text-[#8A8A8A]">{date}</p>
 
-        <h1 className="mt-2 text-4xl font-bold text-white">
+        <h1 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
           Welcome back, {janitorName}
         </h1>
 
@@ -30,9 +30,9 @@ export default function JanitorHeader({
       </div>
 
       {/* Shift Summary */}
-      <div className="flex flex-wrap gap-4">
+      <div className="flex w-full flex-col gap-4 sm:flex-row sm:flex-wrap lg:w-auto">
         {/* Working Hours */}
-        <div className="flex min-w-64 items-center gap-4 rounded-2xl border border-[#2A2A2A] bg-[#191919] px-5 py-4">
+        <div className="flex w-full items-center gap-4 rounded-2xl border border-[#2A2A2A] bg-[#191919] px-5 py-4 sm:w-auto sm:min-w-64">
           <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0BCB51]/10">
             <Clock3
               size={22}
@@ -52,7 +52,7 @@ export default function JanitorHeader({
         </div>
 
         {/* Assigned Area */}
-        <div className="flex min-w-64 items-center gap-4 rounded-2xl border border-[#2A2A2A] bg-[#191919] px-5 py-4">
+        <div className="flex w-full items-center gap-4 rounded-2xl border border-[#2A2A2A] bg-[#191919] px-5 py-4 sm:w-auto sm:min-w-64">
           <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0BCB51]/10">
             <MapPin
               size={22}

@@ -2,7 +2,7 @@ import { Bell, CircleCheck, ShieldCheck } from "lucide-react";
 
 export default function MaintenanceReminder() {
   return (
-    <section className="rounded-2xl border border-[#0BCB51]/20 bg-[#0BCB51]/10 p-6">
+    <section className="overflow-hidden rounded-2xl border border-[#0BCB51]/20 bg-[#0BCB51]/10 p-6">
       <div className="flex items-center gap-3">
         <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0BCB51]/15">
           <Bell
