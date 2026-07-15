@@ -9,7 +9,7 @@ export default function UpcomingMaintenance({
   maintenance,
 }: UpcomingMaintenanceProps) {
   return (
-    <section className="rounded-2xl border border-[#2A2A2A] bg-[#191919] p-6">
+    <section className="overflow-hidden rounded-2xl border border-[#2A2A2A] bg-[#191919] p-6">
       <div>
         <h2 className="text-xl font-semibold text-white">
           Predicted Maintenance
