@@ -9,9 +9,9 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { ArrowLeft, Home, TriangleAlert, Coins, Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "Home", icon: Home, href: "/student" },
-  { label: "Report", icon: TriangleAlert, href: "/student/report-overflow" },
-  { label: "Eco-Points", icon: Coins, href: "/student/eco-points" },
+  { label: "Home", icon: Home, href: "/apspace-user" },
+  { label: "Report", icon: TriangleAlert, href: "/apspace-user/report-overflow" },
+  { label: "Eco-Points", icon: Coins, href: "/apspace-user/eco-points" },
 ];
 
 export default function StudentNavBar() {
@@ -46,7 +46,7 @@ export default function StudentNavBar() {
               const Icon = item.icon;
               const isActive = pathName === item.href;
 
-              if (item.href === "/student/eco-points") {
+              if (item.href === "/apspace-user/eco-points") {
                 return (
                   <TooltipProvider key={item.href} delay={100}>
                     <Tooltip>
