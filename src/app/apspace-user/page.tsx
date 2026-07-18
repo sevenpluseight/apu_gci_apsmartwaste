@@ -92,7 +92,7 @@ export default function StudentPage() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           
-          <Link href="/student/report-overflow">
+          <Link href="/apspace-user/report-overflow">
             <div className="group flex flex-col items-center justify-center gap-4 rounded-xl bg-[#191919] border border-[#525252] px-6 py-16 transition-all duration-200 hover:border-[#0BCB51]/60 cursor-pointer">
               <TriangleAlert
                 size={32}
@@ -106,7 +106,7 @@ export default function StudentPage() {
             </div>
           </Link>
 
-          <Link href="/student/eco-points">
+          <Link href="/apspace-user/eco-points">
             <div className="group flex flex-col items-center justify-center gap-4 rounded-xl bg-[#191919] border border-[#525252] px-6 py-16 transition-all duration-200 hover:border-[#0BCB51]/60 cursor-pointer">
               <Coins
                 size={32}
