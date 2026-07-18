@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const roles = [
   {
-    title: "Student",
+    title: "APSpace User",
     icon: GraduationCap,
-    href: "/student",
+    href: "/apspace-user",
     description:
       "Report waste issues and participate in sustainable recycling initiatives across the campus.",
     features: [
@@ -14,7 +14,7 @@ const roles = [
       "View & Redeem Eco-Points",
       "Track Recycling Activity",
     ],
-    button: "Explore Student",
+    button: "Explore",
   },
   // {
   //   title: "Facility",
@@ -30,17 +30,17 @@ const roles = [
   //   button: "Explore Dashboard",
   // },
   {
-    title: "Janitor",
+    title: "Cleaner",
     icon: BrushCleaning,
-    href: "/janitor",
+    href: "/cleaner",
     description:
-      "Complete assigned cleaning tasks and keep campus waste facilities well maintained",
+      "View real-time bin status, manage assigned overflow reports and track predicted waste bag replacements for efficient waste management.",
     features: [
-      "View Assigned Tasks",
-      "Update Cleaning Status",
-      "Mark Tasks as Completed",
+      "View Real-Time Bin Status",
+      "View Assigned Overflow Reports",
+      "View Predicted Waste Bag Replacements",
     ],
-    button: "Explore Janitor",
+    button: "Explore",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function RoleSelection() {
         </div>
 
         <p className="mb-8 text-lg font-medium text-white">
-          Experience SmartWaste from the perspective of students or janitors.
+          Experience SmartWaste from the perspective of APSpace users or cleaners.
         </p>
         
         <div className="mx-auto grid max-w-4xl gap-7 md:grid-cols-2">
