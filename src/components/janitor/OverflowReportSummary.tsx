@@ -30,7 +30,7 @@ export default function OverflowReportSummary({
           </h2>
 
           <p className="mt-1 text-sm text-[#B2B2B2]">
-            Student-submitted bin reports currently assigned to you.
+            APSpace User-submitted bin reports currently assigned to you.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export default function OverflowReportSummary({
             </p>
 
             <p className="mt-2 text-xs text-[#8A8A8A]">
-              New student reports will appear here once assigned.
+              New user reports will appear here once assigned.
             </p>
           </div>
         )}
