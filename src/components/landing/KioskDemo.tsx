@@ -35,7 +35,7 @@ export default function KioskDemo() {
         <div className="mt-8 grid gap-4 md:grid-cols-4">
           <div className="rounded-2xl border border-[#2A2A2A] bg-[#191919] p-5">
             <p className="text-sm font-semibold text-[#0BCB51]">
-              APSPace User Journey
+              APSpace User Journey
             </p>
             <p className="mt-2 text-sm leading-6 text-[#B2B2B2]">
               Authentication, recyclable deposit, validation and Eco-Points
