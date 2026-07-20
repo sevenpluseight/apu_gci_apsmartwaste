@@ -47,7 +47,7 @@ export default function KioskPage() {
             />
           </div>
 
-          <h2 className="mt-6 text-2xl font-semibold text-white">Student</h2>
+          <h2 className="mt-6 text-2xl font-semibold text-white">APSpace User</h2>
 
           <p className="mt-3 text-sm leading-6 text-[#B2B2B2]">
             Experience the recycling process from APCard authentication to
