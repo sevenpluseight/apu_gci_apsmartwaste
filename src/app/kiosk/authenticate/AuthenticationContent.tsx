@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import KioskLayout from "@/components/kiosk/KioskLayout";
 import CardReader from "@/components/kiosk/CardReader";
 
-type KioskRole = "student" | "janitor";
+type KioskRole = "APSpace User" | "Cleaner";
 
 export default function AuthenticateContent() {
   const router = useRouter();
@@ -14,12 +14,12 @@ export default function AuthenticateContent() {
   const requestedRole = searchParams.get("role");
 
   const role: KioskRole =
-    requestedRole === "janitor" ? "janitor" : "student";
+    requestedRole === "Cleaner" ? "Cleaner" : "APSpace User";
 
   const [isCardDetected, setIsCardDetected] = useState(false);
 
   const getNextRoute = () =>
-    role === "janitor"
+    role === "Cleaner"
       ? "/kiosk/janitor/verifying"
       : "/kiosk/student/verifying";
 

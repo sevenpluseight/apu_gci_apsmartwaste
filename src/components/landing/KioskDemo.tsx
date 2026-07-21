@@ -8,9 +8,9 @@ export default function KioskDemo() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[#B2B2B2]">
-            Watch the complete APSmartWaste workflow including the student
+            Watch the complete APSmartWaste workflow including the APSpace User
             recycling experience at the smart kiosk, automated waste validation,
-            Eco-Points rewards and the janitor maintenance process triggered by
+            Eco-Points rewards and the cleaner maintenance process triggered by
             kiosk bin alerts and overflowing waste reports.
           </p>
         </div>
@@ -35,7 +35,7 @@ export default function KioskDemo() {
         <div className="mt-8 grid gap-4 md:grid-cols-4">
           <div className="rounded-2xl border border-[#2A2A2A] bg-[#191919] p-5">
             <p className="text-sm font-semibold text-[#0BCB51]">
-              Student Journey
+              APSpace User Journey
             </p>
             <p className="mt-2 text-sm leading-6 text-[#B2B2B2]">
               Authentication, recyclable deposit, validation and Eco-Points
@@ -64,7 +64,7 @@ export default function KioskDemo() {
 
           <div className="rounded-2xl border border-[#2A2A2A] bg-[#191919] p-5">
             <p className="text-sm font-semibold text-[#0BCB51]">
-              Janitor Workflow
+              Cleaner Workflow
             </p>
             <p className="mt-2 text-sm leading-6 text-[#B2B2B2]">
               Assigned maintenance tasks, compartment access and waste bag

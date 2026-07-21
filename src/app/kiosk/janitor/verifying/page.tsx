@@ -14,7 +14,7 @@ const steps = [
   },
   {
     label: "Verifying Staff Role",
-    description: "Confirming your janitor account and maintenance permissions...",
+    description: "Confirming your cleaner account and maintenance permissions...",
     icon: UserRoundCheck,
   },
   {

@@ -15,7 +15,7 @@ export default function UpcomingTasksPage() {
   return (
     <div className="mx-auto max-w-360 px-10 py-6 text-white">
       <section>
-        <p className="text-sm text-[#B2B2B2]">Janitor Task Management</p>
+        <p className="text-sm text-[#B2B2B2]">Cleaner Task Management</p>
 
         <h1 className="mt-1 text-3xl font-semibold">Upcoming Tasks</h1>
 
