@@ -1,5 +1,5 @@
 import LandingNavbar from "@/components/landing/LandingNavBar";
-import HeroSection from "@/components/landing/Hero";
+// import HeroSection from "@/components/landing/Hero";
 import CampaignOverview from "@/components/landing/CampaignOverview";
 import KioskDemo from "@/components/landing/KioskDemo";
 import RoleSelection from "@/components/landing/RoleSelection";
@@ -22,9 +22,9 @@ export default function Home() {
 
       <div className="relative z-10">
         <LandingNavbar />
-        <HeroSection />
-        <CampaignOverview />
+        {/* <HeroSection /> */}
         <KioskDemo />
+        <CampaignOverview />
         <RoleSelection />
         <Footer />
       </div>
