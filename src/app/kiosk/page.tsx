@@ -47,7 +47,7 @@ export default function KioskPage() {
             />
           </div>
 
-          <h2 className="mt-6 text-2xl font-semibold text-white">Student</h2>
+          <h2 className="mt-6 text-2xl font-semibold text-white">APSpace User</h2>
 
           <p className="mt-3 text-sm leading-6 text-[#B2B2B2]">
             Experience the recycling process from APCard authentication to
@@ -81,7 +81,7 @@ export default function KioskPage() {
             />
           </div>
 
-          <h2 className="mt-6 text-2xl font-semibold text-white">Janitor</h2>
+          <h2 className="mt-6 text-2xl font-semibold text-white">Cleaner</h2>
 
           <p className="mt-3 text-sm leading-6 text-[#B2B2B2]">
             Explore the maintenance workflow for accessing the kiosk, replacing
@@ -94,7 +94,7 @@ export default function KioskPage() {
               <span className="font-semibold text-[#0BCB51]">
                 Prototype:
               </span>{" "}
-              The selected interface simulates a janitor role detected from the
+              The selected interface simulates a cleaner role detected from the
               APCard before maintenance access is granted.
             </p>
           </div>

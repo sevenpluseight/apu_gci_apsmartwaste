@@ -125,7 +125,7 @@ export default function UpcomingMaintenance({
       <div className="mt-5 rounded-xl border border-[#0BCB51]/20 bg-[#0BCB51]/10 p-4">
         <p className="text-xs leading-6 text-[#B2B2B2]">
           APSmartWaste predicts waste bag replacement based on each kiosk&apos;s
-          fill level. Janitors receive assignments only when maintenance is
+          fill level. Cleaners receive assignments only when maintenance is
           required, reducing unnecessary inspections.
         </p>
       </div>

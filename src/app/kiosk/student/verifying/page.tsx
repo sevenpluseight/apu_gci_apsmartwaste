@@ -14,7 +14,7 @@ const steps = [
   },
   {
     label: "Getting Your Information",
-    description: "Retrieving your student information...",
+    description: "Retrieving your user information...",
     icon: UserRound,
   },
   {
