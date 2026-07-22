@@ -11,10 +11,12 @@ export default function AuthenticateContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const requestedRole = searchParams.get("role");
+  const requestedRole = searchParams.get("role")?.toLowerCase();
 
   const role: KioskRole =
-    requestedRole === "Cleaner" ? "Cleaner" : "APSpace User";
+    requestedRole === "janitor" || requestedRole === "cleaner"
+      ? "Cleaner"
+      : "APSpace User";
 
   const [isCardDetected, setIsCardDetected] = useState(false);
 
