@@ -13,15 +13,19 @@ export default function AuthenticateContent() {
 
   const requestedRole = searchParams.get("role");
 
+  const normalizedRole = requestedRole?.toLowerCase();
+
   const role: KioskRole =
-    requestedRole === "Cleaner" ? "Cleaner" : "APSpace User";
+    normalizedRole === "cleaner" || normalizedRole === "janitor"
+      ? "Cleaner"
+      : "APSpace User";
 
-  const [isCardDetected, setIsCardDetected] = useState(false);
-
-  const getNextRoute = () =>
+  const nextRoute =
     role === "Cleaner"
       ? "/kiosk/janitor/verifying"
       : "/kiosk/student/verifying";
+
+  const [isCardDetected, setIsCardDetected] = useState(false);
 
   useEffect(() => {
     const cardDetectionTimer = setTimeout(() => {
@@ -29,14 +33,14 @@ export default function AuthenticateContent() {
     }, 4500);
 
     const verificationTimer = setTimeout(() => {
-      router.push(getNextRoute());
+      router.push(nextRoute);
     }, 5000);
 
     return () => {
       clearTimeout(cardDetectionTimer);
       clearTimeout(verificationTimer);
     };
-  }, [role, router]);
+  }, [nextRoute, router]);
 
   return (
     <KioskLayout>
